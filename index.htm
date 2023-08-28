@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="Unicode">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA官网</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="introduce">
+                <ul>
+                <li>工作室简介</li>
+                <li>作品列表</li>
+                <li>广告知识</li>
+                <li>联系我们</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <h2>
+            欢迎来到我们的工作室
+        </h2>
+        <div class="title">
+            <p>
+                Chizuru Art Studio 是一个充满创意和灵感的地方，致力于创造精美而独特的艺术作品。我们相信艺术是一种表达情感、传达思想、探索想象力的无限途径，因此我们为您提供一个充满活力和开放的创作环境。
+            </p>
+        </div>
+
+    </div>
+    <div id="sloganDiv">
+        <h2 id="slogan" class="slogans">United Nations</h2>
+    </div>  
+    <script>
+        // 定义一组随机标语
+        const slogans = [
+            "共同创造更绿色的未来！",
+            "团结起来减少碳排放！",
+            "迈出拯救地球的步伐！",
+            "逐步减少碳足迹，联合国引领前进！",
+            "全球行动，地方影响！",
+            "从言语到行动，联合国的碳减排绿色议程！",
+            "赋能变革，创造可持续的明天！",
+            "你的星球，你的责任！",
+            "构建更绿色的遗产，联合国为减少碳影响的愿景！",
+            "绿色选择，更明亮的未来，与联合国携手降低碳足迹！"
+        ];
+
+        // 获取标语元素
+        const sloganElement = document.getElementById("slogan");
+
+        // 随机选择并显示标语
+        function displayRandomSlogan() {
+            const randomIndex = Math.floor(Math.random() * slogans.length);
+            sloganElement.textContent = slogans[randomIndex];
+        }
+
+        // 刷新页面时显示随机标语
+        window.onload = displayRandomSlogan;
+    </script>
+
+    <footer>
+        <p>
+            Chizuru Art @ 2023-2024 All rights reserved. All creations copyright of the creators.
+        </p>
+    </footer>
+</body>
+</html>

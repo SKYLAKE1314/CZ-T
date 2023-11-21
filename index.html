@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="Unicode">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>AI智能科技|AI人工智能中台</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- 引入 Bundle.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Bootstrap JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+    <!-- 引入字体图标样式 -->
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="style/base.css">
+    <!-- 引入头部-底部公共样式 -->
+    <link rel="stylesheet" href="style/frame.css">
+    <style>
+        /* 轮播图区域 */
+        .slide-area {
+            width: 100%;
+            height: 600px;
+        }
+
+        #carouselExampleIndicators,
+        #carouselExampleIndicators .carousel-inner,
+        #carouselExampleIndicators .carousel-item,
+        #carouselExampleIndicators .carousel-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 轮播 控制器 */
+        .carousel-indicators {
+            bottom: 24px;
+        }
+
+        .carousel-indicators>button {
+            transform: skewX(-40deg) !important;
+        }
+
+        .carousel-plathform {
+            text-align: left;
+        }
+
+        /* 轮播 文本内容 */
+        .carousel-box-text {
+            color: #fff;
+        }
+
+        .carousel-box-text h2 {
+            font-size: 4rem;
+            line-height: 70px;
+            padding-top: 170px;
+        }
+
+        .carousel-box-text h3 {
+            font-size: 1.8rem;
+            line-height: 40px;
+        }
+
+        /* 按钮 - 了解更多 */
+        .carousel-box-text .btnMore {
+            position: absolute;
+            bottom: 170px;
+            width: 220px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 30px;
+            background: rgba(0, 0, 0, .2);
+            padding-left: 40px;
+            font-size: 16px;
+        }
+
+        .carousel-box-text .btnMore::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 15px;
+            padding-right: 30px;
+            border: rgb(29, 61, 134) 10px solid;
+            border-right: none;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+        }
+
+        .carousel-box-text .btnMore:hover {
+            opacity: .65;
+            cursor: pointer;
+        }
+
+        .carousel-box.img1 {
+            background: url(./picture/home-banner-algorithm.jpg) center;
+            background-size: 100% auto;
+        }
+
+        .carousel-box.img2 {
+            background: url(./picture/home-banner-01.jpg) center;
+            background-size: 100% auto;
+        }
+
+        .carousel-box.img3 {
+            background: url(./picture/home-banner-02.jpg) center;
+            background-size: 100% auto;
+        }
+
+        .carousel-box.img4 {
+            background: url(./picture/home-banner-d04.jpg) center;
+            background-size: 100% auto;
+        }
+
+        .carousel-box.img5 {
+            background: url(./picture/home-banner-03.jpg) center;
+            background-size: 100% auto;
+        }
+
+        .carousel-box.img6 {
+            background: url(./picture/home-banner-04.jpg) center;
+            background-size: 100% auto;
+        }
+
+        /* .carousel-control-offset {} */
+
+        /* 一站式平台(人工智能中台) */
+        .one-stop-area {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .one-stop-area h4 {
+            margin: 30px auto;
+            font-size: 1.25rem;
+        }
+
+        .one-stop {
+            display: flex;
+            justify-content: space-around;
+            /* 均匀排列每一个子元素，每个元素周围分配相同的空间 */
+        }
+
+        .one-stop li {
+            padding: 20px;
+            border-radius: 3px;
+            transition: .5s;
+        }
+
+        .one-stop li:hover {
+            background: rgb(238, 238, 238);
+        }
+
+        .one-stop li>i {
+            display: block;
+            margin: auto;
+            width: 74px;
+            height: 64px;
+            /* 为动画的元素添加 transition */
+            transition: .5s;
+        }
+
+        .one-stop li>i>img {
+            width: 100%;
+        }
+
+        .one-stop li:hover>i {
+            /* 使过渡效果持续 1 秒 */
+            transition-duration: 1s;
+            transform: scale(1.05) rotate(360deg);
+        }
+
+        .one-stop-title {
+            margin-top: 20px;
+            font-size: 1.4rem;
+        }
+
+        .one-stop-summary {
+            font-size: 1.2rem;
+        }
+
+        .one-stop-summary>p {
+            margin-bottom: 2px;
+        }
+
+        /* 实践验证 */
+        .practical-area {
+            height: 35rem;
+        }
+
+        .practical-area .title-area h4 {
+            font-weight: lighter;
+        }
+
+        .practical-cont {
+            display: none;
+        }
+
+        .tab-cont-show {
+            display: block;
+        }
+
+        .practical-cont h5 {
+            margin: 5rem auto 2rem;
+            font-size: 3rem;
+        }
+
+        .practical-cont p {
+            font-size: 1.5rem;
+            line-height: 3.2rem;
+        }
+
+        .practical-area .tab-cont-show {}
+
+        /* 技术构造 */
+        .build-area {
+            margin: 60px 0;
+        }
+
+        .build-area-title {
+            position: absolute;
+            top: -116px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40rem;
+            height: 6rem;
+            background: url(images/build-title-bline.png) no-repeat center bottom;
+            background-size: 100% 4px;
+            text-align: center;
+            font-size: 2.8rem;
+        }
+
+        .build-area-cont {
+            position: relative;
+            width: 120rem;
+            height: 60rem;
+            background: url(images/build-bgimg.jpg) no-repeat center;
+            z-index: 1;
+        }
+
+        .build-area-cont span {
+            /* 具备定位的盒子垂直水平居中的方式 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            color: rgb(133, 191, 242);
+            z-index: 3;
+        }
+
+
+        .build-area-cont span:nth-child(1) {
+            top: 62%;
+            font-size: 2.8rem;
+            color: rgb(35, 138, 218);
+        }
+
+        .build-area-cont span:nth-child(2) {
+            top: 74%;
+        }
+
+        .build-area-cont span:nth-child(3) {
+            top: 88%;
+        }
+
+        .build-bgimg-l,
+        .build-bgimg-r {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .build-bgimg-l {
+            background: url(images/build-bgimg-l.jpg) no-repeat center;
+        }
+
+        .build-bgimg-r {
+            background: url(images/build-bgimg-r.jpg) no-repeat center;
+        }
+
+        .build-area-text {
+            position: absolute;
+            top: 0;
+            padding: 2rem;
+            width: 42rem;
+            height: 13rem;
+            font-size: 1.4rem;
+            border: rgb(216, 216, 216) 1px solid;
+            border-radius: 4px;
+            z-index: 3;
+        }
+
+        .build-area-text p::before {
+            content: ' • ';
+            display: inline-block;
+            width: 1.6rem;
+            color: rgb(35, 138, 218);
+        }
+
+        .build-bgimg-l .build-area-text {
+            left: 0;
+        }
+
+        .build-bgimg-r .build-area-text {
+            right: 0;
+        }
+
+        /* 绘制可交互区域 */
+        .btn-bgimg-l,
+        .btn-bgimg-r {
+            position: absolute;
+            top: 16%;
+            width: 50rem;
+            height: 46rem;
+            /* background: rgba(226, 69, 69, .719); */
+            z-index: 4;
+        }
+
+        .btn-bgimg-l {
+            left: 0;
+        }
+
+        .btn-bgimg-r {
+            right: 0;
+        }
+
+        /* 合作伙伴 */
+
+        .partner {
+            height: 40rem;
+        }
+
+        .partner h2 {
+            text-align: center;
+        }
+
+        /* .hr-line {
+            width: 100%;
+            position: relative;
+            margin: 50px auto;
+        }
+
+        .hr-line::before,
+        .hr-line::after {
+            content: '';
+            display: inline-block;
+            width: 30%;
+            height: 20px;
+            background: url(./logoImg/title-divide-line.png) no-repeat;
+            background-size: 100% 2px;
+        }
+
+        .hr-line::before {
+            float: left;
+        }
+
+        .hr-line::after {
+            float: right;
+            transform: rotate(180deg);
+        } */
+
+        .table-tab {
+            max-width: 70%;
+            min-width: 400px;
+            text-align: center;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        /* .active {
+            margin-top: 3%;
+        } */
+
+        label {
+            /* color: skyblue; */
+        }
+
+        label:hover {
+            color: skyblue;
+            transition: .4s;
+        }
+
+        .separator {
+            margin: 0 5px;
+            /* 调整分隔符与标签之间的间距 */
+            color: #999;
+            /* 设置分隔符的颜色 */
+        }
+
+        .Partner-logo>span>img {
+            margin-top: 1%;
+            width: 25%;
+        }
+
+        .hide-modules {
+            display: none;
+        }
+
+
+        /* mobile 解决方案 */
+        @media only screen and (max-waidth: 767px) {
+            .slide-area {
+                overflow: hidden;
+                background: rgba(4, 13, 31, 1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-plathform">
+        <div class="wrap">
+            <div class="web-logo">
+                <a href="#">
+                    <img src="images/web-logo.png" alt="AI智能科技">
+                </a>
+            </div>
+            <ul class="nav">
+                <li class="active">
+                    <!-- / 表示直接跳转到站点的根目录 -->
+                    <a href="/">首页</a>
+                </li>
+                <li class="dropDown">
+                    <label for="">核心技术</label>
+                    <div class="submenu-list">
+                        <a href="#" class="sfwl-icon">算法网络</a>
+                        <a href="#" class="jszd-icon">边缘计算</a>
+                    </div>
+                </li>
+                <li class="dropDown">
+                    <label for="">解决方案</label>
+                    <div class="submenu-list">
+                        <a href="#" class="znjy-icon">智能教育</a>
+                        <div class="submenu-list-tab">
+                            <a href="#">· AToT智能 + 物联网解决方案</a>
+                            <a href="#">· 教务教学平台解决方案</a>
+                        </div>
+                        <a href="#" class="zncs-icon">智能城市</a>
+                        <div class="submenu-list-tab">
+                            <a href="#">· 综治雪亮智能解决方案</a>
+                            <a href="#">· 智慧社区解决方案</a>
+                            <a href="#">· 智慧景区解决方案</a>
+                            <a href="#">· 智慧园区解决方案</a>
+                        </div>
+                        <a href="#" class="znOther-icon">智能防护</a>
+                        <div class="submenu-list-tab">
+                            <a href="#">· 电网运监解决方案</a>
+                            <a href="#">· 应急指挥解决方案</a>
+                            <a href="#">· 消防通道解决方案</a>
+                            <a href="#">· 安保技防解决方案</a>
+                        </div>
+                        <a href="#" class="xzzf-icon">行政执法</a>
+                        <div class="submenu-list-tab">
+                            <a href="#">· 智慧环保解决方案</a>
+                            <a href="#">· 智慧渔政解决方案</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropDown">
+                    <label for="">产品服务</label>
+                    <div class="submenu-list">
+                        <a href="">智能感知终端</a>
+                        <div class="submenu-list-tab">
+                            <a href="#">· Agile UF08 人脸识别终端</a>
+                            <a href="#">· Agile DS101人证访客一体机</a>
+                            <a href="#">· Agile IS43 立式识别信息屏</a>
+                            <a href="#">· Agile IS13 人脸识别信息屏</a>
+                            <a href="#">· Agile IPC-F 人脸抓拍摄像头</a>
+                            <a href="#">· Agile IPC-C 车牌识别摄像头</a>
+                        </div>
+                        <a href="#" class="jszd-icon">边缘计算终端</a>
+                        <div class="submenu-list-tab">
+                            <a href="#">· Agile iBox-D目标识别分析盒</a>
+                            <a href="#">· Agile iBox-F人脸识别分析盒</a>
+                        </div>
+                        <a href="#" class="znOther-icon">行业应用平台</a>
+                        <div class="submenu-list-tab">
+                            <a href="#">· 智慧教育3.0平台</a>
+                            <a href="#">· 智慧云视ACV平台</a>
+                            <a href="#">· 图像识别算法定制服务</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">合作伙伴</a>
+                </li>
+                <li>
+                    <a href="#">联系我们</a>
+                </li>
+                <li>
+                    <a href="#" class="aicould">AI云</a>
+                    <div class="submenu-list">
+                        <a href="#">智慧云视ACV平台</a>
+                        <a href="#">智慧校园3.0平台</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 轮播图区域 -->
+    <article class="slide-area">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <!-- 轮播 - 控制器 -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-box img1">
+                        <div class="wrap">
+                            <div class="carousel-box-text">
+                                <h2>AgileNet目标检测网络</h2>
+                                <h3>自主研发AgilNet目标检测网络，目标与分类网络一体。</h3>
+                                <h3>采用神经网络深度学习，突破小尺寸，高动态和模拟图片人脸检测的极限，大大提升了检测的准确性。</h3>
+                                <div class="btnMore">了解更多</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-box img2">
+                        <div class="wrap">
+                            <div class="carousel-box-text">
+                                <h2>AIoT · 未来已来，智慧云视ACV创新平台</h2>
+                                <h3>采用：“云 + 网 + 端” 架构，依托人工智能云、物联网技术、边缘计算终端，</h3>
+                                <h3>为智能城市、智能校园、智能安防、应急响应等行业及场景提供了高效的AI落地通道</h3>
+                                <div class="btnMore">了解更多</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-box img3">
+                        <div class="wrap">
+                            <div class="carousel-box-text">
+                                <h2>Agile - iBox 边缘计算终端</h2>
+                                <h3>前置AI分析，节约流量宽带，让应用方案更灵活、可靠！</h3>
+                                <!-- <h3>采用神经网络深度学习，突破小尺寸，高动态和模拟图片人脸检测的极限，大大提升了检测的准确性。</h3> -->
+                                <div class="btnMore">了解更多</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-box img4">
+                        <div class="wrap">
+                            <div class="carousel-box-text">
+                                <h2>Agile - iBox 户外专用边缘分析盒</h2>
+                                <h3>IP67防水，内嵌神经网络识别算法，识别监控画面中的自然水体、漂浮物、污染情况等‥‥</h3>
+                                <!-- <h3>采用神经网络深度学习，突破小尺寸，高动态和模拟图片人脸检测的极限，大大提升了检测的准确性。</h3> -->
+                                <div class="btnMore">了解更多</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-box img5">
+                        <div class="wrap">
+                            <div class="carousel-box-text">
+                                <h2>Agile IPC 人脸、车牌识别摄像头</h2>
+                                <h3>一款高速、支持变焦、自带补光的AI人脸、车牌识别摄像头</h3>
+                                <h3>支持跟踪、最优人脸选择功能，配套边缘计算终端使用</h3>
+                                <div class="btnMore">了解更多</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-box img6">
+                        <div class="wrap">
+                            <div class="carousel-box-text">
+                                <h2>AI智慧校园平台</h2>
+                                <h3>依托丰富强大的AI分析能力，从提供AI分析、边缘计算、公有云、私有云等技术，</h3>
+                                <h3>到重新定义家校沟通、校园智能安防、数字化教育等轻量化应用平台。</h3>
+                                <div class="btnMore">了解更多</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </article>
+
+    <script>
+        const myCarouselElement = document.querySelector('#carouselExampleIndicators')
+
+        const carousel = new bootstrap.Carousel(myCarouselElement, {
+            interval: 2000
+        })
+    </script>
+
+
+
+    <!-- 一站式u平台 智能中台 -->
+    <article class="one-stop-area">
+        <div class="wrap">
+            <h4>AI行业解决方案，人工智能中台</h4>
+            <ul class="one-stop">
+                <li>
+                    <i class="one-stop-icon"><img src="images/terrace-icon1.png" alt="自研核心算法"></i>
+                    <div class="one-stop-title">自研核心算法</div>
+                    <div class="one-stop-summary">
+                        <p>自研AgilNet神经检测网络</p>
+                        <p>突破小尺寸、高QPS的</p>
+                        <p>检测极限</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="one-stop-icon"><img src="images/terrace-icon2.png" alt="自研核心算法"></i>
+                    <div class="one-stop-title">自研核心算法</div>
+                    <div class="one-stop-summary">
+                        <p>自研AgilNet神经检测网络</p>
+                        <p>突破小尺寸、高QPS的</p>
+                        <p>检测极限</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="one-stop-icon"><img src="images/terrace-icon3.png" alt="自研核心算法"></i>
+                    <div class="one-stop-title">自研核心算法</div>
+                    <div class="one-stop-summary">
+                        <p>自研AgilNet神经检测网络</p>
+                        <p>突破小尺寸、高QPS的</p>
+                        <p>检测极限</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="one-stop-icon"><img src="images/terrace-icon4.png" alt="自研核心算法"></i>
+                    <div class="one-stop-title">自研核心算法</div>
+                    <div class="one-stop-summary">
+                        <p>自研AgilNet神经检测网络</p>
+                        <p>突破小尺寸、高QPS的</p>
+                        <p>检测极限</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="one-stop-icon"><img src="images/terrace-icon5.png" alt="自研核心算法"></i>
+                    <div class="one-stop-title">自研核心算法</div>
+                    <div class="one-stop-summary">
+                        <p>自研AgilNet神经检测网络</p>
+                        <p>突破小尺寸、高QPS的</p>
+                        <p>检测极限</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </article>
+
+
+
+    <!-- 三大解决方案 -->
+    <article class="solution">
+        <div class="wrap">
+            <div class="title-area">
+                <h4>深入行业，真正让AI技术落地</h4>
+                <p>专注将人工智能技术深度赋能行业发展，在多领域推出领先的创新技术和产品</p>
+            </div>
+            <div class="solution-effect">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <!-- 边框动效 -->
+                            <i class="t"></i>
+                            <i class="r"></i>
+                            <i class="b"></i>
+                            <i class="l"></i>
+                            <span>
+                                <i class="iconfont icon-znjy"></i>
+                                <p>智能教育</p>
+                            </span>
+                            <div class="solution-mask">
+                                <p>依托丰富强大的AI分析能力，从提供AI分析、边缘计算、公有云、私有云等技术， 到重新定义家校沟通、校园智能安防、数字化教育等轻量化应用平台 </p>
+                            </div>
+                            <div class="subFl">
+                                <label>区级/校级智能安防方案 </label>
+                                <label>区级/校级智慧校园3.0方案 </label>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <!-- 边框动效 -->
+                            <i class="t"></i>
+                            <i class="r"></i>
+                            <i class="b"></i>
+                            <i class="l"></i>
+                            <span>
+                                <i class="iconfont icon-zncs"></i>
+                                <p>智能城市</p>
+                            </span>
+                            <div class="solution-mask">
+                                <p>成熟的安全能力和强大的工程化能力， 提供从AI算法到智能感知终端、边缘计算、云部署的平台方案， 涵盖综治、雪亮、社区、旅游、园区等场景。</p>
+                            </div>
+                            <div class="subFl city">
+                                <label>智能网格员</label>
+                                <label>智能社区</label>
+                                <label>智能景区</label>
+                                <label>智能园区</label>
+                                <label>智能环保</label>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <!-- 边框动效 -->
+                            <i class="t"></i>
+                            <i class="r"></i>
+                            <i class="b"></i>
+                            <i class="l"></i>
+                            <span>
+                                <i class="iconfont icon-other-zn"></i>
+                                <p>其他智能</p>
+                            </span>
+                            <div class="solution-mask">
+                                <p>AIoT，基于智慧云视ACV创新云平台，物联网技术，结合 i-Box 边缘计算终端，可为多种应用场景提供高性能、快接入、通用性强的AI解决方案。</p>
+                            </div>
+                            <div class="subFl safety">
+                                <label>电网运监</label>
+                                <label>应急指挥</label>
+                                <label>安保技防</label>
+                                <label>消防通道</label>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hr-line"></div>
+        <!-- 实践验证 practical -->
+        <div class="wrap practical-area">
+            <div class="title-area">
+                <h4>实践验证，智能世界无限可能</h4>
+                <ul class="title-tab">
+                    <li class="active">智能社区</li>
+                    <li>智慧教育</li>
+                    <li>智慧安防</li>
+                    <li>智慧园区</li>
+                    <li>智慧环保</li>
+                    <li>智慧渔政</li>
+            </div>
+            </ul>
+
+            <section class="practical-cont tab-cont-show">
+                <h5>智慧社区，AI成为常态化社区治理工具，打造网格员、综治、城管、社区智慧应用 </h5>
+                <p>
+                    2019年8月，AI智能携手渠道伙伴，在苛刻的比选中脱颖而出，协助荣昌区政府政法委在社区常态化治理中落地AI网格化改造，
+                    快速识别街道人、车、物异常，并推送到网格员手机端，对各类事件进行核查、处置，并对事件进行关联、整合、分析、归档。 24小时实时分析，让社区、街道工作不打烊..
+                </p>
+            </section>
+            <section class="practical-cont">
+                <h5>AI智能携手各大运营商，打造智慧教育AI云创新平台</h5>
+                <p>2019年，AI智能与多家运营商达成战略合作，参与智慧校园顶层设计与建设，结合运营商优质云网资源， 将在校园智能教育、智能安防方面提供AI云服务，利用物联网、边缘计算终端，快速、低成本部署校园智能应用
+                </p>
+            </section>
+            <section class="practical-cont">
+                <h5>AI智能与云南安保集团跨界融合实现全省智能安防转型</h5>
+                <p>AI智能联合云南省安保集团，以AI应用提升安保公司竞争力，推动智能技防手段， 助力社区、医院、校园、加油站等场景下的主动安全防护，减少危险行为、安全漏洞提供有力技术支持。</p>
+            </section>
+            <section class="practical-cont">
+                <h5>智慧园区方案</h5>
+                <p>新技术助力园区从管理型向服务型、增值运营转变，打造以人工智能技术深度融合产业集聚新高地</p>
+            </section>
+            <section class="practical-cont">
+                <h5>智慧环保方案</h5>
+                <p>通过对水环境、大气、噪声、土壤、自然生态等污染情况的实时监控，运用AI图像识别技术，自动分析、识别可疑污染源，实时推送短信预警，推进问题的及时整改与落实，实现了从人防到技防的转变，提升环保治理的时效性
+                </p>
+            </section>
+            <section class="practical-cont">
+                <h5>智慧渔政方案</h5>
+                <p>针对当前渔业水域面积广，渔政执法难度大，执法人员力量薄弱等问题，
+                    “智慧渔政”以渔船、船员为主体，以互联网、云计算、大数据、人工智能技术为支撑，采用先进的高清监控、边缘计算图像分析技术，对水源周边进行全方位、全天候的高清视频监控覆盖和分析。
+                    当出现钓鱼、渔船捕鱼行为时主动预警，联动推送至网格人员处置。</p>
+            </section>
+        </div>
+    </article>
+
+    <!-- 技术架构 -->
+    <article class="build-area">
+        <div class="hr-line"></div>
+        <div class="wrap">
+            <div class="build-area-title">技术构造</div>
+            <div class="build-area-cont">
+                <span>融控中心</span>
+                <span>神经网络 · 深度学习 · 算法</span>
+                <span>智能感知终端 · AI边缘计算 ·物联网终端</span>
+                <div class="build-bgimg-l">
+                    <div class="build-area-text">
+                        <p>基于神经网络技术的边缘计算盒，智能感知终端，<br> 主动全天候发现目标，替代了传统低效的人工监视。</p>
+                    </div>
+                </div>
+                <div class="build-bgimg-r">
+                    <div class="build-area-text">
+                        <p>融控中心，对现有利旧监控的可视化管理，解决了原有电视墙的诸多弊端；</p>
+                        <p>三维一体的指挥、调度、联动中心，集中管理、一键下发。</p>
+                    </div>
+                </div>
+                <!-- 绘制可交互区域 -->
+                <div class="btn-bgimg-l"></div>
+                <div class="btn-bgimg-r"></div>
+            </div>
+        </div>
+    </article>
+
+    <!-- 合作伙伴 -->
+    <article class="partner">
+        <div class="hr-line"></div>
+        <h2>无界，探索AI新时代生态</h2>
+        <ul class="table-tab">
+            <li class="active">
+                <label for="ALPHA">合作伙伴</label>
+                <span class="separator">|</span>
+                <label for="BRAVO">生态伙伴</label>
+                <span class="separator">|</span>
+                <label for="CHARLIE">服务客户</label>
+            </li>
+            <li>
+                <div class="Partner-logo hide-modules" id="ALPHA">
+                    <span><img src="images/logo-dx.png" alt="中国电信"></span><span><img src="images/logo-yd.png"
+                            alt="中国移动"></span><span><img src="images/logo-lt.png" alt="中国联通"></span><span><img
+                            src="images/logo-tt.png" alt="中国铁塔"></span>
+                </div>
+                <div class="Partner-logo hide-modules" id="BRAVO">
+                    <span><img src="images/logo-zx.png" alt="中兴"></span><span><img src="images/logo-albb.png"
+                            alt="阿里巴巴"></span><span><img src="images/logo-hw.png" alt="华为"></span><span><img
+                            src="images/logo-zxyh.png" alt="中信银行"></span>
+                </div>
+                <div class="Partner-logo hide-modules" id="CHARLIE">
+                    <span><img src="images/logo-jh.png" alt="建设银行"></span><span><img src="images/logo-jk.png"
+                            alt="金科集团"></span><span><img src="images/logo-xy.png" alt="兴业银行"></span><span><img
+                            src="images/logo-lh.png" alt="龙湖地产"></span>
+                </div>
+            </li>
+        </ul>
+
+    </article>
+
+    <!-- 页脚菜单 -->
+    <article class="footer-area">
+        <div class="wrap">
+            <div class="footer-menu">
+                <div class="web-ft-logo">
+                    <img src="images/web-logo.png" alt="AI智能科技">
+                </div>
+                <ul class="footer-menu-box">
+                    <li>
+                        <p>核心技术</p>
+                        <a href="#">算法网络</a>
+                        <a href="#">边缘计算</a>
+                    </li>
+                    <li>
+                        <p>解决方案</p>
+                        <a href="#">智能教育</a>
+                        <a href="#">智能城市</a>
+                        <a href="#">其他智能</a>
+                    </li>
+                    <li>
+                        <p>产品服务</p>
+                        <a href="#">智能感知终端</a>
+                        <a href="#">边缘计算终端</a>
+                        <a href="#">行政应用平台</a>
+                    </li>
+                    <li>
+                        <p>合作伙伴</p>
+                        <a href="#">合作伙伴</a>
+                    </li>
+                    <li>
+                        <p>联系我们</p>
+                        <a href="#">联系我们</a>
+                    </li>
+                    <li>
+                        <p>AI云</p>
+                        <a href="#">智慧云视ACV平台</a>
+                        <a href="#">智慧校园3.0平台</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 页脚信息 -->
+            <div class="footer-info">
+                <div class="footer-infoL">
+                    <p>商务合作</p>
+                    <p>咨询热线 <b>400-151-1868</b></p>
+                    <div class="footer-info-item">
+                        <span>Copyright &copy; 重庆AI智能科技有限公司 2005-2021</span>
+                        <span>渝ICP备2021000082号</span>
+                        <span>渝公网安备 50010302001058号</span>
+                    </div>
+                </div>
+                <div class="footer-ewm">
+                    <img src="images/ewm.jpg" alt="人工智能中台">
+                    <p>AI人工智能中台</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <script>
+        $(document).scroll(function () {
+            // 获取元素相当于文档顶部的偏移坐标值
+            let top = $('#carouselExampleIndicators').offset().top
+            // 获取文档被卷去的部分
+            let scrollTop = $(document).scrollTop()
+            if (scrollTop > top) {
+                $('.header-plathform').addClass('active')
+            } else {
+                $('.header-plathform').removeClass('active')
+            }
+        })
+
+        // 分类选项卡
+        $('.title-tob li').mouseenter(function () {
+            $('.title-tab li').mouseenter(function () {
+                $(this).addClass('active')
+                // 匹配选项卡对应的内容
+                // console.log($(this).index());
+                let index = $(this).index()
+                let section = $('.wrap .section').eq(index)
+                section.addClass('tab-cont-show').siblings().removeClass('tab-cont-show')
+            })
+        })
+
+        // 技术架构
+        $('.btn-bgimg-l').mouseenter(function () {
+            $('.build-bgimg-l').css('display', 'block')
+        })
+        $('.btn-bgimg-l').mouseleave(function () {
+            $('.build-bgimg-l').css('display', 'none')
+        })
+
+        $('.btn-bgimg-r').hover(function () {
+            $('.build-bgimg-r').fadeToggle()
+        })
+    </script>
+
+    <script>
+        // 默认显示合作伙伴的内容
+        $('#ALPHA').show();
+        // 设置初始颜色
+        $('label[for="ALPHA"]').css('color', 'skyblue');
+        // 创建一个变量来跟踪当前可见的内容
+        let currentContent = $('#ALPHA');
+        // 监听点击事件
+        $('label').click(function () {
+            // 获取点击标签的for属性值
+            const target = $(this).attr('for');
+            const targetContent = $('#' + target);
+            // 避免重复动画
+            if (!targetContent.is(':visible')) {
+                // 隐藏当前可见的内容，使用fadeOut来添加渐隐效果
+                currentContent.fadeOut(300, function () {
+                    // 渐隐完成后，显示相应的内容并使用fadeIn添加渐显效果
+                    targetContent.fadeIn(300);
+                });
+                // 更新当前可见的内容
+                currentContent = targetContent;
+                // 移除所有标签的颜色样式
+                $('label').css('color', '');
+                // 添加颜色样式到当前点击标签
+                $(this).css('color', 'skyblue');
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

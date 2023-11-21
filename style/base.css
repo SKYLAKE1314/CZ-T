@@ -1,0 +1,332 @@
+ /* 公共样式  */
+ div,
+ span,
+ p,
+ i,
+ em,
+ cite,
+ img,
+ small,
+ label,
+ strong,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ ol,
+ ul,
+ li,
+ input,
+ button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: lighter;
+    border: 0;
+    outline: 0;
+ }
+
+ html,
+ body {
+    min-width: 1366px;
+    font: 10px Helvetica, Tahoma, Arial, Microsoft YaHei, "微软雅黑", sans-serif;
+    font-size: 62.5%;
+    /* rem 是相当于根元素HTML为基准
+     通常，各大主流浏览器的 font-size 默认值为 16px
+     1rem = 16px * 62.5% = 10px */
+ }
+
+ li {
+    list-style: none;
+ }
+
+ a,
+ a:hover,
+ a.active {
+    text-decoration: none;
+    color: #fff;
+ }
+
+ a:hover {
+    cursor: pointer;
+ }
+
+ /* 版心 1280ox */
+ .wrap {
+    position: relative;
+    margin: 0 auto;
+    padding: 0px 20px;
+    width: 1240px;
+    height: 100%;
+ }
+
+/* 三大解决方案 */
+.solution {
+   padding: 8.7rem 0;
+   background: url(../images/solution-bg.jpg) no-repeat;
+   background-size: 100% 100%;
+}
+
+.solution .title-area h4 {
+   margin-bottom: 2rem;
+   color: #fff;
+   font-size: 3.2rem;
+}
+
+.solution .title-area p {
+   font-size: 1.4rem;
+   letter-spacing: 1px;
+   opacity: .5;
+}
+
+.solution .title-area .subFl {
+   display: inline-flex;
+   justify-content: space-between;
+   margin-top: 3rem;
+   width: 100%;
+}
+
+.solution .title-area .subFl label {
+   display: flex;
+   padding: .5rem 1.3rem;
+   border: 1px solid #fff; /* 修改这行 */
+   position: relative; /* 添加这行 */
+}
+
+.solution .title-area .subFl.city,
+.solution .title-area .subFl.safety {
+   /* 自动换行 */
+   flex-wrap: wrap;
+   /* 水平居中 */
+   justify-content: center;
+}
+
+.solution .title-area .subFl.city>label,
+.solution .title-area .subFl.safety>label{
+   margin-bottom: 1.5rem;
+   margin-right: 1rem;
+   width: 30%;
+}
+
+.solution-effect{
+   position: relative;
+   margin-bottom: 10rem;
+   overflow: hidden;
+}
+
+.solution .title-area{
+   margin-bottom: 4rem;
+   text-align: center;
+}
+
+.solution-effect li{
+   float: left;
+   margin-right: 2px;
+   width: calc((100% - 6px) / 3);
+   height: 300px;
+   text-align: center;
+   background: url(../images/solution-Lmask.jpg) no-repeat;
+}
+
+.solution-effect li a{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   transition: .5s;
+}
+
+.solution-effect li a::before{
+   content: &apos;&apos;;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(rgba(16, 52, 116, 1),rgba(52, 30, 218, 1));
+   transition: .8s;
+}
+
+.solution-effect li a:hover::before{
+   opacity: 0;
+}
+
+.solution-effect li span{
+   position: relative;
+   width: 100%;
+   color: #fff;
+   font-size: 2rem;
+   text-align: center;
+   transition: .5s;
+}
+
+.solution-effect li span i{
+   font-size: 5rem;
+}
+
+.solution-effect li span p{
+   padding-top: 2rem;
+}
+
+.solution-effect li a:hover>i{
+   opacity: 1;
+}
+
+
+/* 边框动效 */
+.solution-effect li a>i {
+   position: absolute;
+   width: 0;
+   height: 0;
+   background: url(../images/solution-mask-Sborder.png) no-repeat;
+   transition: .35s;
+   opacity: 0;
+   z-index: 2;
+}
+
+.solution-effect li a:hover>i {
+   opacity: 1;
+}
+
+.solution-effect li a>i.t {
+   top: 0;
+   left: 0;
+}
+
+.solution-effect li a>i.r {
+   top: 0;
+   right: 0;
+}
+
+.solution-effect li a>i.b {
+   right: 0;
+   bottom: 0;
+}
+
+.solution-effect li a>i.l {
+   left: 0;
+   bottom: 0;
+}
+
+/* 左上和右下 */
+.solution-effect li a:hover>i.t,
+.solution-effect li a:hover>i.b {
+   width: 100%;
+   height: 3px;
+}
+
+/* 右上和左下 */
+.solution-effect li a:hover>i.r,
+.solution-effect li a:hover>i,
+l {
+   height: 100%;
+   width: 3px;
+}
+
+/* 遮罩层 */
+.solution-mask {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   padding: 7rem 3rem 3rem;
+   color: #fff;
+   font-size: 1.6rem;
+   cursor: pointer;
+   opacity: 0;
+   transition: .8s;
+}
+
+.solution-effect li:hover .solution-mask {
+   opacity: 1;
+}
+
+.solution-effect li:hover span {
+   opacity: 0;
+}
+
+/* 分割线 */
+.hr-line {
+   position: relative;
+   margin: 8rem 0;
+   height: 2px;
+}
+
+.hr-line::before,
+.hr-line::after {
+   content: '';
+   display: inline-block;
+   width: 30%;
+   height: 100%;
+   background: url(../images/title-divide-line.png) no-repeat;
+   background-size: 100% 2px;
+}
+
+.hr-line::before {
+   float: left;
+}
+
+.hr-line::after {
+   float: right;
+   transform: rotate(180deg);
+}
+
+/* 分类选项卡 */
+.title-tab {
+   display: flex;
+   justify-content: center;
+}
+
+.title-tab li {
+   font-size: 1.7rem;
+   color: rgb(189, 189, 189);
+}
+
+.title-tab:hover,
+.title-tab.active {
+   color: #fff;
+   cursor: pointer;
+}
+
+.title-tab li:not(:first-child):before {
+   content: '';
+   display: inline-block;
+   margin-left: 16px;
+   width: 16px;
+   height: 12px;
+   border-left: rgba(185, 185, 185, .5) 1px solid;
+}
+
+ .title-tab {}
+
+ .title-tab {}
+
+ /* 子页面的banner图片 */
+ .sub-banner-area {
+   width: 100%;
+   height: 59.4rem;
+   color: #fff;
+ }
+
+ .banner-area-text {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 60%;
+ }
+
+ .banner-area-text>h2 {
+   margin-bottom: 2.4rem;
+   font-size: 4.8rem;
+ }
+
+ .banner-area-text>p {
+   font-size: 1.6rem;
+   line-height: 3rem;
+ }

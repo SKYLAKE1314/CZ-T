@@ -105,24 +105,24 @@
 }
 
 .solution .title-area .subFl.city>label,
-.solution .title-area .subFl.safety>label{
+.solution .title-area .subFl.safety>label {
    margin-bottom: 1.5rem;
    margin-right: 1rem;
    width: 30%;
 }
 
-.solution-effect{
+.solution-effect {
    position: relative;
    margin-bottom: 10rem;
    overflow: hidden;
 }
 
-.solution .title-area{
+.solution .title-area {
    margin-bottom: 4rem;
    text-align: center;
 }
 
-.solution-effect li{
+.solution-effect li {
    float: left;
    margin-right: 2px;
    width: calc((100% - 6px) / 3);
@@ -131,7 +131,7 @@
    background: url(../images/solution-Lmask.jpg) no-repeat;
 }
 
-.solution-effect li a{
+.solution-effect li a {
    position: relative;
    display: flex;
    justify-content: center;
@@ -141,8 +141,8 @@
    transition: .5s;
 }
 
-.solution-effect li a::before{
-   content: &apos;&apos;;
+.solution-effect li a::before {
+   content: '';
    position: absolute;
    top: 0;
    left: 0;
@@ -152,12 +152,15 @@
    transition: .8s;
 }
 
-.solution-effect li a:hover::before{
+.solution-effect li a:hover::before {
    opacity: 0;
 }
 
-.solution-effect li span{
-   position: relative;
+.solution-effect li span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
    width: 100%;
    color: #fff;
    font-size: 2rem;
@@ -165,18 +168,17 @@
    transition: .5s;
 }
 
-.solution-effect li span i{
+.solution-effect li span i {
    font-size: 5rem;
 }
 
-.solution-effect li span p{
+.solution-effect li span p {
    padding-top: 2rem;
 }
 
-.solution-effect li a:hover>i{
+.solution-effect li a:hover>i {
    opacity: 1;
 }
-
 
 /* 边框动效 */
 .solution-effect li a>i {
@@ -285,12 +287,12 @@ l {
 
 .title-tab li {
    font-size: 1.7rem;
-   color: rgb(189, 189, 189);
+   color: #808080;
 }
 
 .title-tab:hover,
 .title-tab.active {
-   color: #fff;
+   color: #0a69c6;
    cursor: pointer;
 }
 

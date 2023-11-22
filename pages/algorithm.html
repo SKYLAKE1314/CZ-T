@@ -42,6 +42,15 @@
             display: none;
         }
 
+        /* 目标检测背景图片 */
+        .target-detection-bg {
+            margin-top: 30rem;
+            width: 100%;
+            height: 64.8rem;
+            background: url(../images/target-detection.jpg) no-repeat;
+            background-size: 100% 64.8rem;
+        }
+
         .tab-cont-show {
             display: block;
         }
@@ -67,6 +76,11 @@
         .wordjc .item-box {
             width: calc((100% - 20px) / 3);
             height: 22rem;
+        }
+
+        .firejc .item-box,
+        .picjc .item-box {
+            height: 60rem;
         }
 
         .item-box-flex {
@@ -111,7 +125,8 @@
 
         .item-mask-effect .video-bg {
             /* object-fit: fill; 不保证原视频比例，内容会填充至整个容器 */
-
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -148,76 +163,489 @@
         </div>
         <section class="target-detection-cont tab-cont-show">
             <div class="target-detection-area">
-                
-                <article class="item-box">
-                    <div class="item-box-flex">
-                        <div class="item-title">
-                            <i class="iconfont icon-person"></i>
-                            <p>人流密度</p>
-                        </div>
-                        <div class="item-mask-effect">
-                            <!-- autoplay自动播放 muted静音播放 loop循环播放 controls控制条
-                             poster属性放视频的预览图 -->
-                            <video class="video-bg" autoplay muted controls loop poster="../video/expression.jpg">
-                                <source src="../video/xr.mp4">
-                            </video>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="item-box">
-                    <div class="item-box-flex">
-                        <div class="item-mask-effect">
-                            <video class="video-bg" poster="../images/xwjc-dd.jpg" autoplay muted controls loop>
-                                <source src="../video/daodi.mp4">
-                            </video>
-                        </div>
-                        <div class="item-title">
-                            <i class="iconfont icon-daodi"></i>
-                            <p>人员倒地</p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="item-box">
-                    <div class="item-box-flex">
-                        <div class="item-title">
-                            <i class="iconfont icon-person"></i>
-                            <p>人流密度</p>
-                        </div>
-                        <div class="item-mask-effect">
-                            <!-- autoplay自动播放 muted静音播放 loop循环播放 controls控制条
-                             poster属性放视频的预览图 -->
-                            <video class="video-bg" autoplay muted controls loop poster="../video/expression.jpg">
-                                <source src="../video/xr.mp4">
-                            </video>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="item-box">
-                    <div class="item-box-flex">
-                        <div class="item-title">
-                            <i class="iconfont icon-person"></i>
-                            <p>人流密度</p>
-                        </div>
-                        <div class="item-mask-effect">
-                            <!-- autoplay自动播放 muted静音播放 loop循环播放 controls控制条
-                             poster属性放视频的预览图 -->
-                            <video class="video-bg" autoplay muted controls loop poster="../video/expression.jpg">
-                                <source src="../video/xr.mp4">
-                            </video>
-                        </div>
-                    </div>
-                </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-title">
+                    <i class="iconfont icon-person"></i>
+                    <p>人流密度</p>
+                  </div>
+                  <div class="item-mask-effect">
+                    <!-- autoplay自动播放  muted静音播放 loop循环播放 controls控制条 
+                       poster属性放视频的预览图 -->
+                    <video class="video-bg" autoplay muted controls loop poster="../video/expression.jpg">
+                      <source src="../video/xr.mp4">
+                    </video>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/xwjc-dd.jpg" autoplay controls muted loop>
+                      <source src="../video/daodi.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-daodi"></i>
+                    <p>人员倒地</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/xwjc-dj.jpg" autoplay controls muted loop>
+                      <source src="../video/dajia.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-dajia"></i>
+                    <p>打 架</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/xwjc-cy.jpg" autoplay controls muted loop>
+                      <source src="../video/xiyan.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-chouy"></i>
+                    <p>吸 烟</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/xwjc-ddh.jpg" autoplay controls muted loop>
+                      <source src="../video/ddh.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-ddh"></i>
+                    <p>打电话</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/xwjc-tkmz.jpg" autoplay controls muted loop>
+                      <source src="../video/tkmz.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-tkmz"></i>
+                    <p>头盔帽子</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" autoplay controls muted loop>
+                      <source src="../video/fanqiang.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-panyan"></i>
+                    <p>攀爬识别</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <img src="../video/expression.jpg" alt="">
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-expression"></i>
+                    <p>表情识别</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" autoplay controls muted loop>
+                      <source src="../video/dzbh.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-dongz"></i>
+                    <p>动作捕获</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <img src="../video/ryinfo.jpg" alt="">
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-ryinfo"></i>
+                    <p>人体属性</p>
+                  </div>
+                </div>
+              </article>
             </div>
-        </section>
-        <section class="target-detection-cont">02</section>
-        <section class="target-detection-cont">03</section>
-        <section class="target-detection-cont">02</section>
-        <section class="target-detection-cont">02</section>
-        <section class="target-detection-cont">02</section>
-        <section class="target-detection-cont">02</section>
+          </section>
+          <section class="target-detection-cont">
+            <div class="target-detection-area carjc">
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/car-jdc.jpg" autoplay controls muted loop>
+                      <source src="../video/jdc.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-jdc"></i>
+                    <p>机动车</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/car-fjdc.jpg" autoplay controls muted loop>
+                      <source src="../video/fjdc.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-fjdc"></i>
+                    <p>非机动车</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/car-gcc.jpg" autoplay controls muted loop>
+                      <source src="../video/gcc.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-gcc"></i>
+                    <p>工程车辆</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="target-detection-cont">
+            <div class="target-detection-area boatjc">
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/boat-cyc.jpg" autoplay controls muted loop>
+                      <source src="../video/cyc.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-cyc"></i>
+                    <p>餐饮船</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/boat-csc.jpg" autoplay controls muted loop>
+                      <source src="../video/csc.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-csc"></i>
+                    <p>采砂船</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/boat-gcc.jpg" autoplay controls muted loop>
+                      <source src="../video/boat-gcc.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-gcy"></i>
+                    <p>工程船</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="target-detection-cont">
+            <div class="target-detection-area">
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/environment-pfw.jpg" autoplay controls muted loop>
+                      <source src="../video/pfw.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-pfw"></i>
+                    <p>河道漂浮物</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/environment-laji.jpg" autoplay controls muted loop>
+                      <source src="../video/halaji.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-halj"></i>
+                    <p>河岸垃圾堆放</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/environment-wushui.jpg" autoplay controls muted loop>
+                      <source src="../video/wushui.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-hspw"></i>
+                    <p>河岸排污识别</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/environment-kaiwa.jpg" autoplay controls muted loop>
+                      <source src="../video/gcc.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-kaiwa"></i>
+                    <p>河岸开挖识别</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/environment-wgjz.jpg" autoplay controls muted loop>
+                      <source src="../video/wzjz.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-wgjz"></i>
+                    <p>河岸违规建筑</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/environment-color.jpg" autoplay controls muted loop>
+                      <source src="../video/hscolor.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-hsys"></i>
+                    <p>河水颜色</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/environment-color.jpg" autoplay controls muted loop>
+                      <source src="../video/lmjs.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-lmjs"></i>
+                    <p>积水识别</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" autoplay controls muted loop>
+                      <source src="../video/aqtd.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-tdyd"></i>
+                    <p>安全通道异常</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" autoplay controls muted loop>
+                      <source src="../video/laoshu.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-laoshu"></i>
+                    <p>夜间老鼠识别</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="target-detection-cont">
+            <div class="target-detection-area firejc">
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/fire-jyz.jpg" autoplay controls muted loop>
+                      <source src="../video/jyz.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-jyz"></i>
+                    <p>加油站</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/fire-ljt.jpg" autoplay controls muted loop>
+                      <source src="../video/laji.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-laji"></i>
+                    <p>垃圾燃烧火焰检测</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/fire-sh.jpg" autoplay controls muted loop>
+                      <source src="../video/shanhuo.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-shanhuo"></i>
+                    <p>山火火焰</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" poster="../images/fire-jg.jpg" autoplay controls muted loop>
+                      <source src="../video/jg.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-jg"></i>
+                    <p>桔梗燃烧</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="target-detection-cont">
+            <div class="target-detection-area picjc">
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <img src="../video/sqdb.jpg" alt="">
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-duibi"></i>
+                    <p>图片深浅识别</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <img src="../video/wlsb.jpg" alt />
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-liewen"></i>
+                    <p>纹路缺陷识别</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <img src="../video/sg-aqd.jpg" />
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-sgaq"></i>
+                    <p>安全带识别</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <video class="video-bg" autoplay controls muted loop>
+                      <source src="../video/swbz.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-shuiwei"></i>
+                    <p>水文标尺识别</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+          <section class="target-detection-cont">
+            <div class="target-detection-area wordjc">
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <img src="../video/bxd.jpg" alt="">
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-bxd"></i>
+                    <p>保险单识别</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <img src="../video/idcard.jpg" alt="">
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-idcard"></i>
+                    <p>身份证识别</p>
+                  </div>
+                </div>
+              </article>
+              <article class="item-box">
+                <div class="item-box-flex">
+                  <div class="item-mask-effect">
+                    <img src="../video/chepai.jpg" alt="">
+                  </div>
+                  <div class="item-title">
+                    <i class="iconfont icon-chepai"></i>
+                    <p>车牌识别</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        <div class="target-detection-bg">
+
+        </div>
 
     </article>
 
@@ -232,8 +660,8 @@
     <script>
         // 加载页首、页尾菜单 load()方法可以将数据加载放置到指定元素中
         // 将文件 "head.html"的内容加载到指定的 .headerMenu 盒子中
-        $('.headerMenu').load('head.html')
-        $('.footerMenu').load('foot.html')
+        $('.headerMenu').load('header.html')
+        $('.footerMenu').load('footer.html')
     </script>
 </body>
 

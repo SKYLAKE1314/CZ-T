@@ -25,18 +25,20 @@
 
 
     <!-- 引入字体图标样式 -->
-    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
     <!-- 公共样式 -->
-    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="../style/base.css">
     <!-- 引入头部-底部公共样式 -->
-    <link rel="stylesheet" href="style/frame.css">
+    <link rel="stylesheet" href="../style/frame.css">
 
     <style>
         .algorithm-banner {
             background: url(../picture/algorithm-banner.jpg) no-repeat;
+            background-size: 100% 100%;
         }
 
         .target-detection-cont {
+            margin-top: 5rem;
             display: none;
         }
 
@@ -44,16 +46,72 @@
             display: block;
         }
 
-        .target-detection-area {}
+        .target-detection-area {
+            overflow: hidden;
+        }
 
-        /* 4m: 表示4的倍数 */
+        /* 4n: 表示4的倍数 */
         .target-detection-area .item-box:not(:nth-child(4n)) {
-            margin-right: 10px;
+            margin-right: 14px;
         }
 
         .target-detection-area .item-box {
             float: left;
-            width: calc((100% - 30px) / 4);
+            margin-bottom: 14px;
+            width: calc((100% - 42px) / 4);
+            height: 22rem;
+        }
+
+        .carjc .item-box,
+        .boatjc .item-box,
+        .wordjc .item-box {
+            width: calc((100% - 20px) / 3);
+            height: 22rem;
+        }
+
+        .item-box-flex {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background: rgb(58, 127, 200);
+        }
+
+        .item-title {
+            text-align: center;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .item-title>i {
+            font-size: 20px;
+        }
+
+        .item-title>p {
+            font-size: 20px;
+        }
+
+        /* 遮罩层(视频图层) */
+        .item-mask-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: .5s;
+            z-index: 1;
+        }
+
+        .item-box-flex:hover .item-mask-effect {
+            opacity: 1;
+        }
+
+        .item-mask-effect .video-bg {
+            /* object-fit: fill; 不保证原视频比例，内容会填充至整个容器 */
+
         }
     </style>
 </head>
@@ -90,19 +148,68 @@
         </div>
         <section class="target-detection-cont tab-cont-show">
             <div class="target-detection-area">
+                
                 <article class="item-box">
-                    <div class="item-title">
-                        <!-- autoplay自动播放 muted静音播放 loop循环播放 controls控制条
+                    <div class="item-box-flex">
+                        <div class="item-title">
+                            <i class="iconfont icon-person"></i>
+                            <p>人流密度</p>
+                        </div>
+                        <div class="item-mask-effect">
+                            <!-- autoplay自动播放 muted静音播放 loop循环播放 controls控制条
                              poster属性放视频的预览图 -->
-                             <video autoplay src="../images/"></video>
-                        <i class="iconfont icon-person"></i>
-                        <p>人流密度</p>
+                            <video class="video-bg" autoplay muted controls loop poster="../video/expression.jpg">
+                                <source src="../video/xr.mp4">
+                            </video>
+                        </div>
                     </div>
                 </article>
 
-                <article></article>
-                <article></article>
-                <article></article>
+                <article class="item-box">
+                    <div class="item-box-flex">
+                        <div class="item-mask-effect">
+                            <video class="video-bg" poster="../images/xwjc-dd.jpg" autoplay muted controls loop>
+                                <source src="../video/daodi.mp4">
+                            </video>
+                        </div>
+                        <div class="item-title">
+                            <i class="iconfont icon-daodi"></i>
+                            <p>人员倒地</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="item-box">
+                    <div class="item-box-flex">
+                        <div class="item-title">
+                            <i class="iconfont icon-person"></i>
+                            <p>人流密度</p>
+                        </div>
+                        <div class="item-mask-effect">
+                            <!-- autoplay自动播放 muted静音播放 loop循环播放 controls控制条
+                             poster属性放视频的预览图 -->
+                            <video class="video-bg" autoplay muted controls loop poster="../video/expression.jpg">
+                                <source src="../video/xr.mp4">
+                            </video>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="item-box">
+                    <div class="item-box-flex">
+                        <div class="item-title">
+                            <i class="iconfont icon-person"></i>
+                            <p>人流密度</p>
+                        </div>
+                        <div class="item-mask-effect">
+                            <!-- autoplay自动播放 muted静音播放 loop循环播放 controls控制条
+                             poster属性放视频的预览图 -->
+                            <video class="video-bg" autoplay muted controls loop poster="../video/expression.jpg">
+                                <source src="../video/xr.mp4">
+                            </video>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
         <section class="target-detection-cont">02</section>

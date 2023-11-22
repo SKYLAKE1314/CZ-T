@@ -290,8 +290,8 @@ l {
    color: #808080;
 }
 
-.title-tab:hover,
-.title-tab.active {
+.title-tab li:hover,
+.title-tab li.active {
    color: #0a69c6;
    cursor: pointer;
 }

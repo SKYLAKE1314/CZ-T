@@ -128,6 +128,106 @@
             width: 100%;
             height: 100%;
         }
+
+        /* 定制服务按钮 */
+        .btnLink {
+            display: block;
+            margin: 40px auto 0;
+            width: 28rem;
+            height: 5rem;
+            border-radius: 30px;
+            background: linear-gradient(90deg, rgb(53, 190, 203), rgb(48, 207, 208), rgb(20, 43, 193));
+            text-align: center;
+        }
+
+        .btnLink>span {
+            display: block;
+            width: 274px;
+            height: 44px;
+            line-height: 44px;
+            border-radius: 30px;
+            background: #fff;
+        }
+
+        .btnLink:hover {
+            background: linear-gradient(90deg, rgb(20, 43, 193), rgb(53, 190, 203));
+        }
+
+        /* 人脸识别 */
+        .hr-line {
+            margin: 0 auto 80px;
+        }
+
+        .face-detect {
+            width: 100%;
+            height: 420px;
+            background: url(../images/algorithm-facesb-bg.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .face-detect-item {
+            float: left;
+            padding: 8% 6%;
+            width: 50%;
+            height: 100%;
+            color: #fff;
+        }
+
+        .face-detect .face-detect-item:first-child {
+            border-right: #9095a7 1px solid;
+        }
+
+        .face-detect-title {
+            margin-bottom: 20px;
+        }
+
+        .face-detect-title i {
+            font-size: 6rem;
+            vertical-align: middle;
+        }
+
+        .face-detect-title span {
+            margin-left: 30px;
+            font-size: 3.4rem;
+            vertical-align: middle;
+        }
+
+        .face-detect-item p {
+            font-size: 2rem;
+            line-height: 35px;
+        }
+
+        /* 准确度及速度 */
+        .accuracy {
+            padding: 5%;
+            height: 48rem;
+            background: linear-gradient(45deg, #4a7ab6 20%, #30cfd0, #194782);
+            color: #fff;
+        }
+
+        .accuracy-text {
+            float: left;
+            padding: 2% 2% 2% 0;
+            width: calc(100% - 48rem);
+        }
+
+        .accuracy-text h5 {
+            margin-bottom: 3rem;
+            font-size: 2.8rem;
+            letter-spacing: 1px;
+        }
+
+        .accuracy-text p {
+            font-size: 1.6rem;
+            line-height: 3rem;
+        }
+
+        .accuracy-img {
+            float: right;
+            width: 48rem;
+            height: 35.5rem;
+            background: url(../images/network-R.png) center;
+        }
     </style>
 </head>
 
@@ -144,7 +244,7 @@
         </div>
     </article>
 
-    <div aria-valuemax="hr-line"></div>
+    <div class="hr-line"></div>
 
     <!-- 目标检测 -->
 
@@ -674,6 +774,18 @@
                         <p>快速检测人脸并返回人脸框位置，准确识别多种属性信息，包括年龄、性别、颜值、表情、情绪、脸型、头部姿态、是否闭眼、是否配戴眼镜、人脸质量信息及类型等。</p>
                     </div>
                 </div>
+            </div>
+        </article>
+
+        <!-- 精准度及速度 -->
+        <article class="algorithm-area">
+            <div class="hr-line"></div>
+            <div class="wrap">
+                <div class="accurcy-text">
+                    <h4>准确度及速度</h4>
+                    <p>在AI智能边缘计算终端中，准确率90%以上的前提下，检测速度可以达到150毫秒;在服务器环境下，速度可以达到30毫秒。将目标区域检测和目标分类检测整合到了单个神经网络模型中实现在准确率较高的情况下快速目标检测与识别。</p>
+                </div>
+                <div class="accurcy-img"></div>
             </div>
         </article>
 

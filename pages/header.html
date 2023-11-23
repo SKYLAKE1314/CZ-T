@@ -24,11 +24,11 @@
 
 
     <!-- 引入字体图标样式 -->
-    <link rel="stylesheet" href="https://skylake1314.github.io/CZT.github.io/iconfont/iconfont.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
     <!-- 公共样式 -->
-    <link rel="stylesheet" href="https://skylake1314.github.io/CZT.github.io/style/base.css">
+    <link rel="stylesheet" href="./style/base.css">
     <!-- 引入头部-底部公共样式 -->
-    <link rel="stylesheet" href="https://skylake1314.github.io/CZT.github.io/style/frame.css">
+    <link rel="stylesheet" href="./style/frame.css">
 </head>
 
 <body>
@@ -36,13 +36,13 @@
         <div class="wrap">
             <div class="web-logo">
                 <a href="#">
-                    <img src="https://skylake1314.github.io/CZT.github.io/images/web-logo.png" alt="AI智能科技">
+                    <img src="/CZT.github.io/images/web-logo.png" alt="AI智能科技">
                 </a>
             </div>
             <ul class="nav">
                 <li class="active">
                     <!-- / 表示直接跳转到站点的根目录 -->
-                    <a href="/">首页</a>
+                    <a href="/CZT.github.io/index.html">首页</a>
                 </li>
                 <li class="dropDown">
                     <label for="">核心技术</label>
@@ -133,6 +133,20 @@
                 $('.header-plathform').addClass('active')
             } else {
                 $('.header-plathform').removeClass('active')
+            }
+        })
+
+        // 使选中的顶部菜单高亮
+        // window.location.href 获取当前页面地址栏 URL
+        // document.getElementById('demo').innerHTML = '当前页面是: ' + window.location.href
+        // 遍历 取得每一个a标签
+        $('.navBar>li a').each (function () {
+            // console.log($(this).href); // 输出underfined
+            console.log($(this)[0].href); // 将"jQuery对象"转换为"JavaScript对象"
+            // 判定: 当前遍历到的a标签的原先元素li添加 .active
+            if ($(this)[0].href == window.location.href) {
+                // 若一致，在<a标签>原生元素li添加 .active
+                $(this).parents('li').addClass('active').siblings().removeClass('active')
             }
         })
     </script>

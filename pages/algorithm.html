@@ -129,6 +129,11 @@
             height: 100%;
         }
 
+        .item-mask-effect .video-bg,
+        .item-mask-effect img {
+            object-fit: cover;
+        }
+
         /* 定制服务按钮 */
         .btnLink {
             display: block;
@@ -783,7 +788,8 @@
             <div class="wrap">
                 <div class="accurcy-text">
                     <h4>准确度及速度</h4>
-                    <p>在AI智能边缘计算终端中，准确率90%以上的前提下，检测速度可以达到150毫秒;在服务器环境下，速度可以达到30毫秒。将目标区域检测和目标分类检测整合到了单个神经网络模型中实现在准确率较高的情况下快速目标检测与识别。</p>
+                    <p>在AI智能边缘计算终端中，准确率90%以上的前提下，检测速度可以达到150毫秒;在服务器环境下，速度可以达到30毫秒。将目标区域检测和目标分类检测整合到了单个神经网络模型中实现在准确率较高的情况下快速目标检测与识别。
+                    </p>
                 </div>
                 <div class="accurcy-img"></div>
             </div>
@@ -797,7 +803,7 @@
     <!-- 引入页尾菜单 -->
     <div class="footerMenu"></div>
 
-    <!-- 引入选项卡script -->
+    <!-- 引入选项卡JavaScript -->
     <script src="../script/tabUrl.js"></script>
     <script>
         // 加载页首、页尾菜单 load()方法可以将数据加载放置到指定元素中

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="Unicode">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI智能科技 | 智能城市</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- 引入 Bundle.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Bootstrap JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+    <!-- 引入字体图标样式 -->
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="../style/base.css">
+    <!-- 引入头部-底部公共样式 -->
+    <link rel="stylesheet" href="../style/frame.css">
+
+    <style>
+        .aicity-banner {
+            background: url(../picture/AiCity-banner.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .aicity-core-img {
+            position: relative;
+            width: 108.5rem;
+            height: 56rem;
+            background: url(../images/AiCity-core-img.jpg) no-repeat;
+        }
+
+        .aicity-core-img>div[class^='text-'] {
+            position: absolute;
+        }
+
+        .aicity-core-img>div[class^='text-'] p {
+            color: blue;
+        }
+
+        .aicity-core-img .text-bottomL {
+            left: 24%;
+        }
+
+        .aicity-core-img .text-bottomR {
+            bottom: 6%;
+            right: 9%;
+        }
+
+        /* 解决方案 */
+        .subsolution-tab-cont {
+            display: none;
+            background: linear-gradient(45deg, #4694c5 40%, #2f5c92, #194782);
+            color: #fff;
+        }
+
+        .tab-cont-show {
+            display: block;
+        }
+
+        .subsolution-title {
+            overflow: hidden;
+        }
+
+        .subsolution-text {
+            float: left;
+            padding-top: 5rem;
+            width: 52%;
+        }
+
+        .subsolution-text h5 {
+            font-size: 3rem;
+        }
+
+        .subsolution-text p {
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+        }
+
+        .subsolution-Rimg {
+            float: right;
+            width: 49.5rem;
+            height: 37.7rem;
+        }
+
+        .subsolution-summary {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 5rem;
+            width: 98%;
+        }
+
+        .subsolution-summary li {
+            margin-bottom: 2.8rem;
+            overflow: hidden;
+        }
+
+        .subsolution-summary li>img {
+            max-width: 100%;
+            transition: .5s;
+        }
+
+        .subsolution-summary li:hover>img {
+            transform: scale(1.08);
+        }
+
+        .subsolution-summary-title {
+            line-height: 40px;
+            text-align: center;
+            background: #fff;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .subsolution-summary.zhsq li:nth-child(6),
+        .subsolution-summary.zhjq li:nth-child(5),
+        .subsolution-summary.zhjq li:nth-child(6) {
+            width: 49%;
+        }
+
+        /* 亮点特征 */
+
+        .solution-trait>p {
+            margin-bottom: 4rem;
+            font-size: 1.7rem;
+            color: #545454;
+            text-align: center;
+        }
+
+        .solution-trait-box {
+            width: 100%;
+            height: 42rem;
+            background: url(../images/AiCity-trait-bg.jpg) no-repeat;
+            background-size: 100% 100%;
+            color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .solution-trait .solution-trait-item:not(:first-child) {
+            border-left: rgba(167, 167, 167, .6) 1px solid;
+        }
+
+        .solution-trait-item {
+            float: left;
+            padding: 8rem 5rem;
+            width: calc(100% / 3);
+            height: 100%;
+        }
+
+        .solution-trait-title {
+            margin-bottom: 2rem;
+        }
+
+        .solution-trait-title i {
+            font-size: 6.6rem;
+            vertical-align: middle;
+        }
+
+        .solution-trait-title span {
+            margin-left: 2.4rem;
+            vertical-align: middle;
+            font-size: 3.4rem;
+        }
+
+        .solution-trait-item>p {
+            font-size: 2rem;
+            line-height: 44px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 引入页首菜单 -->
+    <div class="headerMenu"></div>
+    <!-- 子页面的banner -->
+    <article id="Top" class="sub-banner-area aicity-banner">
+        <div class="wrap">
+            <div class="banner-area-text">
+                <h2>智能城市</h2>
+                <h2>人工智能赋能未来城市</h2>
+                <p>依托领先的AI技术、成熟的安全能力和强大的工程化能力，提供从AI算法到AI高清摄像机、从边缘到私有云的全方位软硬一体解决方案，
+                    覆盖综治、雪亮、城管、社区、景区等诸多应用场景，与各种网络条件、使用环境及管理系统无缝整合。</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- 核心构建 -->
+    <article class="wrap">
+        <h4>核心 &middot; 构建智能化城市新业态</h4>
+        <div class="aicity-img">
+            <div class="text-topL">
+                <p>一机多用，具备入侵检测功能，入</p>
+                <p>侵事件紧急推送，安防联动处理</p>
+            </div>
+            <div class="text-topR">
+                <p>• 园区人群分析</p>
+                <p>• 园区通行管理</p>
+                <p>• 安全可视化管理</p>
+            </div>
+            <div class="text-bottomL">
+                <p>• 街道常态化管理</p>
+                <p>• 社区智能布控</p>
+                <p>• 智能网格员</p>
+            </div>
+            <div class="text-bottomR">
+                <p>• 景区环境数据采集</p>
+                <p>• 人流数据分析</p>
+                <p>• 安全主动预防预警</p>
+            </div>
+        </div>
+    </article>
+    <div class="hr-line" id="scrollTop"></div>
+    <!-- 解决方案 -->
+    <article class="wrap subsolution">
+        <div class="title-area">
+            <h4>智能城市解决方案</h4>
+            <ul>
+                <li class="active">综治雪亮智能方案</li>
+                <li>智慧社区方案</li>
+                <li>智慧景区方案</li>
+                <li>智慧园区方案</li>
+                <li>智慧环保方案</li>
+            </ul>
+        </div>
+        <section class="subsolution-tab-cont tab-cont-show">
+            <div class="subsolution-title">
+                <div class="subsolution-text">
+                    <h5>综治雪亮 · 智慧网格员</h5>
+                    <p>凭借复杂环境的AI能力，与公共安全相结合，提升常态化治理水平，利用现有存量视频监控进行前端边缘分析，提供指挥调度平台实现网格化处置闭环。</p>
+                </div>
+                <div class="subsolution-Rimg"><img src="../images/AiCity-zhcs.png" alt="综治雪亮智能方案"></div>
+            </div>
+            <!-- 摘要 -->
+            <ul class="subsolution-summary">
+                <li>
+                    <img src="../images/zhcs-laji.jpg" alt="堆放垃圾">
+                    <div>垃圾堆放</div>
+                </li>
+                <li>
+                    <img src="../images/zhcs-rqjj.jpg" alt="人群聚集">
+                    <div>人群聚集</div>
+                </li>
+                <li>
+                    <img src="../images/zhcs-ysjy.jpg" alt="游商经营">
+                    <div>游商经营</div>
+                </li>
+                <li>
+                    <img src="../images/zhcs-cdjy.jpg" alt="出店经营">
+                    <div>出店经营</div>
+                </li>
+                <li>
+                    <img src="../images/zhcs-clwt.jpg" alt="机动车违停">
+                    <div>机动车违停</div>
+                </li>
+                <li>
+                    <img src="../images/zhcs-fjdc.jpg" alt="非机动车违停">
+                    <div>非机动车违停</div>
+                </li>
+                <li>
+                    <img src="../images/zhcs-wggg.jpg" alt="违规广告">
+                    <div>违规广告</div>
+                </li>
+                <li>
+                    <img src="../images/zhcs-yjls.jpg" alt="沿街晾晒">
+                    <div>沿街晾晒</div>
+                </li>
+                <li>
+                    <img src="../images/zhcs-zdry.jpg" alt="重点人员监控">
+                    <div>重点人员监控</div>
+                </li>
+                <li>
+                    <img src="../images/zhcs-ldrk.jpg" alt="流动人口布控">
+                    <div>流动人口布控</div>
+                </li>
+            </ul>
+        </section>
+        <section class="subsolution-tab-cont"></section>
+        <section class="subsolution-tab-cont"></section>
+        <section class="subsolution-tab-cont"></section>
+        <section class="subsolution-tab-cont"></section>
+    </article>
+    <div class="hr-line"></div>
+    <!-- 亮点特征 -->
+    <article class="solution-trait">
+        <h4>解决方案特征亮点</h4>
+        <p>创新技术引领城市建设</p>
+        <div class="wrap">
+            <div class="solution-trait-box">
+                <div class="solution-trait-item">
+                    <div class="solution-trait-title">
+                        <i class="iconfont icon-gntd"></i>
+                        <span>技术</span>
+                    </div>
+                    <p>AI边缘分析技术</p>
+                    <p>私有/共有云全栈平台</p>
+                </div>
+                <div class="solution-trait-item">
+                    <div class="solution-trait-title">
+                        <i class="iconfont icon-business"></i>
+                        <span>商业</span>
+                    </div>
+                    <p>渠道共建模式</p>
+                </div>
+                <div class="solution-trait-item">
+                    <div class="solution-trait-title">
+                        <i class="iconfont icon-tedian"></i>
+                        <span>特点</span>
+                    </div>
+                    <p>设施利旧</p>
+                    <p>轻终端</p>
+                    <p>三方业务平台对接</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- 引入页尾菜单 -->
+    <div class="footerMenu"></div>
+
+    <!-- 引入选项卡JavaScript -->
+    <script src="../script/tabUrl.js"></script>
+</body>
+
+</html>

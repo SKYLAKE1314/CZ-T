@@ -31,6 +31,10 @@
     <link rel="stylesheet" href="./style/frame.css">
 </head>
 
+<style>
+
+</style>
+
 <body>
     <header class="header-plathform">
         <div class="wrap">
@@ -47,7 +51,7 @@
                 <li class="dropDown">
                     <label for="">核心技术</label>
                     <div class="submenu-list">
-                        <a href="#" class="sfwl-icon">算法网络</a>
+                        <a href="/CZT.github.io/pages/algorithm.html" class="sfwl-icon">算法网络</a>
                         <a href="#" class="jszd-icon">边缘计算</a>
                     </div>
                 </li>
@@ -59,12 +63,13 @@
                             <a href="#">· AToT智能 + 物联网解决方案</a>
                             <a href="#">· 教务教学平台解决方案</a>
                         </div>
-                        <a href="#" class="zncs-icon">智能城市</a>
+                        <a onclick="window.open('Aicity.html#Top','_self')" class="zncs-icon">智能城市</a>
                         <div class="submenu-list-tab">
-                            <a href="#">· 综治雪亮智能解决方案</a>
-                            <a href="#">· 智慧社区解决方案</a>
-                            <a href="#">· 智慧景区解决方案</a>
-                            <a href="#">· 智慧园区解决方案</a>
+                            <a href="AiCity.html?type=1">· 综治雪亮智能解决方案</a>
+                            <a href="AiCity.html?type=2">· 智慧社区解决方案</a>
+                            <a href="AiCity.html?type=3">· 智慧景区解决方案</a>
+                            <a href="AiCity.html?type=4">· 智慧园区解决方案</a>
+                            <a href="AiCity.html?type=5">· 智慧环保解决方案</a>
                         </div>
                         <a href="#" class="znOther-icon">智能防护</a>
                         <div class="submenu-list-tab">
@@ -140,7 +145,7 @@
         // window.location.href 获取当前页面地址栏 URL
         // document.getElementById('demo').innerHTML = '当前页面是: ' + window.location.href
         // 遍历 取得每一个a标签
-        $('.navBar>li a').each (function () {
+        $('.navBar>li a').each(function () {
             // console.log($(this).href); // 输出underfined
             console.log($(this)[0].href); // 将"jQuery对象"转换为"JavaScript对象"
             // 判定: 当前遍历到的a标签的原先元素li添加 .active

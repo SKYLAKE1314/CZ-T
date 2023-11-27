@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+<head>
+    <meta charset="Unicode">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx -->
+    <script>
+        // 当前显示文档的完整的url地址
+        document.write(location.href)
+
+        // let str = 'HELLO WORLD.'
+        // 提示: 如若将空字符串("")用作 separator，那么 stringObject 中的每个字符之间都会被分割。
+        // let n = str.split('')
+        // console.log(n);
+        // split()   mdn 菜鸟教程
+
+          // url:https://协议 ?问号前面主机地址(域名) ?问号后面是一个位置的标识符
+        var url = 'https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx'
+
+        var type = url.split('?')[1] // 以 ? 分割url地址为两段(数组) 0为url地址 1为参数
+        // ['https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx','wd=2']
+
+        // var type = url.split('?')[1] // 将上一步中的下标为1的值取出，即: wd=2
+
+        // var type = url.split('?')[1].split('=') // 再以 = 分割为新数组 ['wd','2']
+
+        var type = url.split('?')[1].split('=')[1] // 再以 = 分割为新数组 ['wd','2']
+
+        console.log(type);
+    </script>
+</body>
+</html>

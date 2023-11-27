@@ -216,6 +216,7 @@
 
         .practical-cont {
             display: none;
+            color: #fff;
         }
 
         .tab-cont-show {
@@ -230,9 +231,8 @@
         .practical-cont p {
             font-size: 1.5rem;
             line-height: 3.2rem;
+            width: 70%;
         }
-
-        .practical-area .tab-cont-show {}
 
         /* 技术构造 */
         .build-area {
@@ -321,7 +321,7 @@
             content: ' • ';
             display: inline-block;
             width: 1.6rem;
-            color: rgb(35, 138, 218);
+            color: #238ADA;
         }
 
         .build-bgimg-l .build-area-text {
@@ -354,37 +354,18 @@
         /* 合作伙伴 */
 
         .partner {
-            height: 40rem;
+            height: 35rem;
         }
 
         .partner h2 {
+            font-size: 2rem;
             text-align: center;
         }
 
-        /* .hr-line {
-            width: 100%;
+        .partner-info {
             position: relative;
-            margin: 50px auto;
+            top: -70px;
         }
-
-        .hr-line::before,
-        .hr-line::after {
-            content: '';
-            display: inline-block;
-            width: 30%;
-            height: 20px;
-            background: url(./logoImg/title-divide-line.png) no-repeat;
-            background-size: 100% 2px;
-        }
-
-        .hr-line::before {
-            float: left;
-        }
-
-        .hr-line::after {
-            float: right;
-            transform: rotate(180deg);
-        } */
 
         .table-tab {
             max-width: 70%;
@@ -394,28 +375,29 @@
             list-style: none;
         }
 
-        /* .active {
-            margin-top: 3%;
-        } */
+        .partner .active {
+            margin-top: 2.5rem;
+            font-size: 1.5rem;
+        }
 
         label {
             /* color: skyblue; */
         }
 
         label:hover {
-            color: skyblue;
+            color: #6973C9;
             transition: .4s;
         }
 
         .separator {
-            margin: 0 5px;
+            margin: 0 1rem;
             /* 调整分隔符与标签之间的间距 */
             color: #999;
             /* 设置分隔符的颜色 */
         }
 
         .Partner-logo>span>img {
-            margin-top: 1%;
+            margin-top: 4rem;
             width: 25%;
         }
 
@@ -462,12 +444,13 @@
                             <a href="#">· AToT智能 + 物联网解决方案</a>
                             <a href="#">· 教务教学平台解决方案</a>
                         </div>
-                        <a href="#" class="zncs-icon">智能城市</a>
+                        <a href="pages/AiCity.html" class="zncs-icon">智能城市</a>
                         <div class="submenu-list-tab">
-                            <a href="#">· 综治雪亮智能解决方案</a>
-                            <a href="#">· 智慧社区解决方案</a>
-                            <a href="#">· 智慧景区解决方案</a>
-                            <a href="#">· 智慧园区解决方案</a>
+                            <a href="pages/AiCity.html">· 综治雪亮智能解决方案</a>
+                            <a href="pages/AiCity.html">· 智慧社区解决方案</a>
+                            <a href="pages/AiCity.html">· 智慧景区解决方案</a>
+                            <a href="pages/AiCity.html">· 智慧园区解决方案</a>
+                            <a href="pages/AiCity.html">· 智慧环保解决方案</a>
                         </div>
                         <a href="#" class="znOther-icon">智能防护</a>
                         <div class="submenu-list-tab">
@@ -486,7 +469,7 @@
                 <li class="dropDown">
                     <label for="">产品服务</label>
                     <div class="submenu-list">
-                        <a href="">智能感知终端</a>
+                        <a href="#" class="gzzd-icon">智能感知终端</a>
                         <div class="submenu-list-tab">
                             <a href="#">· Agile UF08 人脸识别终端</a>
                             <a href="#">· Agile DS101人证访客一体机</a>
@@ -851,34 +834,35 @@
     <!-- 合作伙伴 -->
     <article class="partner">
         <div class="hr-line"></div>
-        <h2>无界，探索AI新时代生态</h2>
-        <ul class="table-tab">
-            <li class="active">
-                <label for="ALPHA">合作伙伴</label>
-                <span class="separator">|</span>
-                <label for="BRAVO">生态伙伴</label>
-                <span class="separator">|</span>
-                <label for="CHARLIE">服务客户</label>
-            </li>
-            <li>
-                <div class="Partner-logo hide-modules" id="ALPHA">
-                    <span><img src="images/logo-dx.png" alt="中国电信"></span><span><img src="images/logo-yd.png"
-                            alt="中国移动"></span><span><img src="images/logo-lt.png" alt="中国联通"></span><span><img
-                            src="images/logo-tt.png" alt="中国铁塔"></span>
-                </div>
-                <div class="Partner-logo hide-modules" id="BRAVO">
-                    <span><img src="images/logo-zx.png" alt="中兴"></span><span><img src="images/logo-albb.png"
-                            alt="阿里巴巴"></span><span><img src="images/logo-hw.png" alt="华为"></span><span><img
-                            src="images/logo-zxyh.png" alt="中信银行"></span>
-                </div>
-                <div class="Partner-logo hide-modules" id="CHARLIE">
-                    <span><img src="images/logo-jh.png" alt="建设银行"></span><span><img src="images/logo-jk.png"
-                            alt="金科集团"></span><span><img src="images/logo-xy.png" alt="兴业银行"></span><span><img
-                            src="images/logo-lh.png" alt="龙湖地产"></span>
-                </div>
-            </li>
-        </ul>
-
+        <div class="partner-info">
+            <h2>无界，探索AI新时代生态</h2>
+            <ul class="table-tab">
+                <li class="active">
+                    <label for="ALPHA">合作伙伴</label>
+                    <span class="separator">|</span>
+                    <label for="BRAVO">生态伙伴</label>
+                    <span class="separator">|</span>
+                    <label for="CHARLIE">服务客户</label>
+                </li>
+                <li>
+                    <div class="Partner-logo hide-modules" id="ALPHA">
+                        <span><img src="images/logo-dx.png" alt="中国电信"></span><span><img src="images/logo-yd.png"
+                                alt="中国移动"></span><span><img src="images/logo-lt.png" alt="中国联通"></span><span><img
+                                src="images/logo-tt.png" alt="中国铁塔"></span>
+                    </div>
+                    <div class="Partner-logo hide-modules" id="BRAVO">
+                        <span><img src="images/logo-zx.png" alt="中兴"></span><span><img src="images/logo-albb.png"
+                                alt="阿里巴巴"></span><span><img src="images/logo-hw.png" alt="华为"></span><span><img
+                                src="images/logo-zxyh.png" alt="中信银行"></span>
+                    </div>
+                    <div class="Partner-logo hide-modules" id="CHARLIE">
+                        <span><img src="images/logo-jh.png" alt="建设银行"></span><span><img src="images/logo-jk.png"
+                                alt="金科集团"></span><span><img src="images/logo-xy.png" alt="兴业银行"></span><span><img
+                                src="images/logo-lh.png" alt="龙湖地产"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </article>
 
     <!-- 页脚菜单 -->
@@ -982,7 +966,7 @@
         // 默认显示合作伙伴的内容
         $('#ALPHA').show();
         // 设置初始颜色
-        $('label[for="ALPHA"]').css('color', 'skyblue');
+        $('label[for="ALPHA"]').css('color', '#238ADA');
         // 创建一个变量来跟踪当前可见的内容
         let currentContent = $('#ALPHA');
         // 监听点击事件
@@ -1002,7 +986,7 @@
                 // 移除所有标签的颜色样式
                 $('label').css('color', '');
                 // 添加颜色样式到当前点击标签
-                $(this).css('color', 'skyblue');
+                $(this).css('color', '#238ADA');
             }
         });
     </script>

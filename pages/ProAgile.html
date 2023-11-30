@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI智能科技 | 智能教育</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- 引入 Bundle.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Bootstrap JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+    <!-- 引入字体图标样式 -->
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="../style/base.css">
+    <!-- 引入头部-底部公共样式 -->
+    <link rel="stylesheet" href="../style/frame.css">
+    <style>
+        .proAglie-banner {
+            height: 520px;
+            background: url(../picture/proAgile-banner.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        .proAgile .title-area {
+            margin-bottom: 50px;
+        }
+
+        .proAgile {
+            background: url(../images/bg-quxian.svg) no-repeat;
+            background-size: 100% auto;
+        }
+
+        /* 产品特征 */
+        .proAglie-trait {
+            display: flex;
+            margin-bottom: 6rem;
+        }
+
+        .proAglie-trait-item {
+            position: relative;
+            padding-left: 7.5rem;
+            width: 25%;
+        }
+
+        .proAglie-trait-item h3 {
+            background: linear-gradient(to right, #1e3abf, #3579d8, #4fc2f4);
+            /* 将背景裁切在元素边框内容，实现半透明效果 */
+            -webkit-background-clip: text;
+            background-clip: text;
+            /* 用文字取背景色 */
+            color: transparent;
+            font-size: 3rem;
+        }
+
+        .proAglie-trait-item p {
+            margin-top: 6px;
+            font-size: 1.2rem;
+            color: #7a7a7a;
+        }
+
+        .proAglie-trait-item::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 8rem;
+            height: 6.9rem;
+        }
+
+        .proAgile-trait-item:nth-child(1)::before {
+            background: url(../images/icon-trait-xs.png) no-repeat;
+            background-size: 6rem;
+        }
+
+        .proAglie-trait-item:nth-child(2)::before {
+            background: url(../images/icon-trait-zq.png) no-repeat;
+            background-size: 6rem;
+        }
+
+        .proAglie-trait-item:nth-child(3)::before {
+            background: url(../images/icon-trait-dmsb.png) no-repeat;
+            background-size: 6rem;
+        }
+
+        .proAglie-trait-item:nth-child(4)::before {
+            background: url(../images/icon-trait-jc.png) no-repeat;
+            background-size: 6rem;
+        }
+
+        /* 产品分类 */
+        .proAgile-area {
+            position: relative;
+            padding: 4%;
+            background: linear-gradient(45deg, #2b5999, #061a38);
+            z-index: 1;
+        }
+
+        .proAglie-area::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 30rem;
+            background: url(../images/line-bg.svg) no-repeat;
+            background-size: 100% auto;
+            z-index: 2;
+            opacity: .8;
+        }
+
+        .proAglie-img {
+            display: flex;
+            justify-content: space-between;
+            margin: 4rem 0 3rem;
+        }
+
+        .proAglie-img-item {
+            width: 33%;
+        }
+
+        .proAglie-img-item>img {
+            max-width: 100%;
+        }
+
+        .proAglie-img-text {
+            height: 6.5rem;
+            background: #fff;
+            color: #000;
+        }
+
+        /* 当前页面中的分割线 */
+        .proAgile-hr-line {
+            position: relative;
+        }
+
+        .proAglie-hr-line::before,
+        .proAgile-hr-line::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 30%;
+            height: 2px;
+            background: url(../images/title-divide-line.png) no-repeat;
+            background-size: 100% 2px;
+        }
+
+        .proAgile-hr-line::before {
+            left: 0;
+        }
+
+        .proAgile-hr-line::after {
+            right: 0;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 引入页首菜单 -->
+    <div class="headerMenu"></div>
+    <!-- 子页面的banner -->
+    <article id="Top" class="sub-banner-area proAglie-banner">
+        <div class="wrap">
+            <div class="banner-area-text">
+                <h2>Agile 智能感知终端系列</h2>
+                <p>用最快的速度帮助用户实现人脸的静态识别
+                    为各行业的人脸门禁、考勤、点名、签到、来访等场景提供完整解决方案</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="proAgile">
+        <div class="hr-line" id="scrollTop"></div>
+        <!-- 使用场景上的分割线 -->
+        <div class="proAgile-hr-line">
+            <div class="wrap">
+
+                <!-- 产品特征 -->
+                <div class="proAgile-trait">
+                    <span class="proAgile-trait-item">
+                        <h3>迅 速</h3>
+                        <p>30000人脸底库、识别时间</p>
+                    </span>
+                    <span class="proAgile-trait-item">
+                        <h3>准 确</h3>
+                        <p>相似度最高可达99.99%</p>
+                    </span>
+                    <span class="proAgile-trait-item">
+                        <h3>多模识别</h3>
+                        <p>3支持人脸、声纹、刷卡、密码</p>
+                    </span>
+                    <span class="proAgile-trait-item">
+                        <h3>易集成</h3>
+                        <p>提供多种接口，方便集成</p>
+                    </span>
+                </div>
+                <!-- 终端系列 -->
+                <div class="title-area">
+                    <h4>Agilie 智能感知终端</h4>
+                    <ul class="title-tab">
+                        <li class="active">UF08 人脸识别终端</li>
+                        <li>DS101人证访客一体机</li>
+                        <li>IS43 立式识别信息屏</li>
+                        <li>IS13 人脸识别信息屏</li>
+                        <li>IPC-F 人脸抓拍摄像头</li>
+                        <li>IPC-C 车牌识别摄像头</li>
+                    </ul>
+                </div>
+                <section id="1" class="title-tab-content">
+                    <div class="proAgile-area">
+                        <div class="proAgile-area-title">
+                            <h5>工业级设计 · 性能稳定</h5>
+                            <p>一款高性能、高可靠性的人脸识别产品，依托深度学习算法</p>
+                        </div>
+                        <!-- 产品图片 -->
+                        <div class="proAgile-img">
+                            <div class="proAgile-img-item">
+                                <img src="../images/product/pro-uf08-1.jpg" alt="人脸识别终端">
+                                <p class="proAgile-img-text">产品采用防水设计，能有效防止水浸和雾潮，使得设备能在各种室外环境下正常使用。</p>
+                            </div>
+                            <div class="proAgile-img-item">
+                                <img src="../images/product/pro-uf08-2.jpg" alt="人脸识别终端">
+                            </div>
+                            <div class="proAgile-img-item">
+                                <img src="../images/product/pro-uf08-3.jpg" alt="人脸识别终端">
+                                <p class="proAgile-img-text">支持人脸识别 1:1 和 1:N 模式，支持外接刷卡，身份证 阅读器。</p>
+                            </div>
+                        </div>
+                        <!-- 产品参数 -->
+                        <div class="proAgile-paramet">
+                            <div class="proAgile-paramet-title">
+                                <h5>Agile UF08 规格参数</h5>
+                                <p>识别准确率 99.99%，识别速度 &lt; 1 秒</p>
+                            </div>
+                            <ul>
+                                <li>显示屏： 8 英寸 IPS 全视角 LCD 屏</li>
+                                <li>操作系统： Linux</li>
+                                <li>串行通讯接口：1 路 RS-232</li>
+                                <li>CPU： 双核 1.0T 算力</li>
+                                <li>继电器输出：1 路开门信号输出</li>
+                                <li>存储容量： 内存 512M，存储 8GB</li>
+                                <li>韦根输出： 1 路韦根 26/34</li>
+                                <li>防护等级： IP54</li>
+                                <li>网络接口： 1 路 100M 以太网口</li>
+                                <li>电 源： DC 12V/2A</li>
+                                <li>刷卡接口： 1 个兼容 1443 协议 typeA/B 卡</li>
+                                <li>工作温度： -10 ℃ ～ 50 ℃</li>
+                                <li>USB 接口： 1 路 Type-A</li>
+                                <li>工作湿度： 10% ～ 90%</li>
+                                <li>设备尺寸： 297.7 × 126 × 79.5（mm）</li>
+                                <li>功 耗： Max. 24 W</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 适用场景 -->
+                    <div class="pro-apply">
+                        <h4>适用场景</h4>
+                        <p>学校、社区、写字楼、酒店、商场、商店、公共服务场所等</p>
+                        <div class="pro-apply-area">
+                            <div class="pro-apply-text">
+                                <h5>识别速度快、准确率高</h5>
+                                <p>最大支持十万人脸照片库</p>
+                                <p>支持抗逆光</p>
+                                <p>支持活体检测</p>
+                                <p>外接刷卡，身份证阅读器</p>
+                                <p>支持 WiFi 功能</p>
+                            </div>
+                            <div class="pro-apply-img"><img src="../images/product/pro-apply-Ruf08.png" alt="人脸识别终端">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="2" class="title-tab-content">
+                    <div class="proAgile-area">
+                        <div class="proAgile-area-title">
+                            <h5>时尚、安全、快速</h5>
+                            <p class="fs14">在精心的设计下，Agile多功能人脸识别终端提供了丰富的的验证模式、敏捷的识别速度，以及时尚、个性化的外观，是一款较强通用性的人脸识别终端</p>
+                        </div>
+                        <div class="pro-ds101">
+                            <img src="../images/product/pro-ds101.png" alt="人证访客一体机">
+                        </div>
+                        <div class="proAgile-paramet">
+                            <div class="proAgile-paramet-title">
+                                <h5>Agile DS101 规格参数</h5>
+                                <p>支持活体检测、陌生人检测、远程更新内容，支持外接打印机、二维码读头等设备 ······</p>
+                            </div>
+                            <ul>
+                                <li>主屏尺寸：10.1 英寸 IPS 全视角 LCD 触摸屏</li>
+                                <li>USB接口： 3路USB2.0</li>
+                                <li>辅屏尺寸：7 英寸 IPS 全视角 LCD 触摸屏 </li>
+                                <li>识别率：识别准确率 99.9%</li>
+                                <li>容 量：人脸容量10000张</li>
+                                <li>速 度：识别速度 &lt; 1 秒5</li>
+                                <li>部署方式：公网、局域网</li>
+                                <li>通讯接口：串型通讯接口 1路RS-232</li>
+                                <li>网络接口：1路RJ45 100M以太网口</li>
+                                <li>电 源： DC 12V/2A</li>
+                                <li>功 耗： Max. 15 W</li>
+                                <li>工作温度：- 10℃~50℃</li>
+                                <li>工作湿度：10% - 90%</li>
+                                <li>设备尺寸： 286 × 228.7 × 88 （mm）</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pro-apply">
+                        <h4>适用场景</h4>
+                        <p>企事业单位、政府大楼、金融网点、酒店前台、车站机场、考试入职等场景</p>
+                        <div class="pro-apply-area">
+                            <div class="pro-apply-img"><img src="../images/product/pro-apply-Rds101.png" alt="人证访客一体机">
+                            </div>
+                            <div class="pro-apply-text">
+                                <h5>智能商业应用</h5>
+                                <div class="pro-apply-summary">
+                                    一款台式双屏人证访客机，具有人证合一检测功能，精确地获取并登记来访人员的身份证信息。外形美观大气，广泛应用于高规格、高安全级别大楼的访客系统建设。</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="3" class="title-tab-content">
+                    <div class="proAgile-area">
+                        <div class="proAgile-area-title">
+                            <h5>43寸高清屏幕 · 高清人脸摄像头</h5>
+                        </div>
+                        <div class="pro-is43">
+                            <img src="../images/product/pro-is43.png" alt="立式识别信息屏">
+                        </div>
+                        <div class="proAgile-paramet is43">
+                            <div class="proAgile-paramet-title">
+                                <h5>Agile IS43 规格参数</h5>
+                                <p>门禁模块 | 触摸屏 | 麦克风 | WIFI模块 | 4G模块 | 读卡器模块等·······</p>
+                            </div>
+                            <ul>
+                                <li>识别模式：人 脸</li>
+                                <li>识别阈值：可 调</li>
+                                <li>管理方式：服务端 | 客户端 跨平台访问</li>
+                                <li>本地保存：近2个月记录（服务端不限）</li>
+                                <li>识别距离：0.5 ~ 1.5米范围可调</li>
+                                <li>接 口：HTTP + JSON</li>
+                                <li>识别高度：上下净高1米</li>
+                                <li>验证鉴权：会员授权时间范围 | 工作时间范围 | 验证模式</li>
+                                <li>支 架：壁 挂</li>
+                                <li>壳 体：铝型材边框+钣金烤漆</li>
+                                <li>欢迎提示：文字（自定义） | 会员信息（备注）|订制提示音</li>
+                                <li>尺 寸：1800 x 580 x 30（mm）</li>
+                                <li>网络连接：WIFI | 网线RJ45</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pro-apply">
+                        <h4>适用场景</h4>
+                        <p>会议签到、大厅迎宾、大门考勤</p>
+                        <div class="pro-apply-area">
+                            <div class="pro-apply-img"><img src="../images/product/pro-apply-Ris43.png" alt="立式识别信息屏">
+                            </div>
+                            <div class="pro-apply-text">
+                                <h5>识别速度快、准确率高</h5>
+                                <p>多场景、广告信息发布</p>
+                                <p>支持多人脸同时识别</p>
+                                <p>支持功能扩展</p>
+                                <p>支持网络人脸摄像头</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="4" class="title-tab-content">
+                    <div class="proAgile-area">
+                        <div class="proAgile-area-title">
+                            <h5>时尚、安全、快速</h5>
+                            <p class="fs14">在精心的设计下，Agile多功能人脸识别终端提供了丰富的的验证模式、敏捷的识别速度，以及时尚、个性化的外观，是一款较强通用性的人脸识别终端。
+                                适用于各种室内、室外大门及通道的进出刷脸场景。</p>
+                        </div>
+                        <div class="proAgile-is13">
+                            <div class="proAgile-is13-item"><img src="../images/product/pro-is13-1.jpg" alt="人脸识别信息屏">
+                            </div>
+                            <div class="proAgile-is13-item"><img src="../images/product/pro-is13-2.jpg" alt="人脸识别信息屏">
+                            </div>
+                        </div>
+                        <div class="proAgile-paramet is43">
+                            <div class="proAgile-paramet-title">
+                                <h5>Agile IS13 规格参数</h5>
+                                <p>工业级设计，性能稳定，线条流畅，支持抗逆光、活体检测、陌生人检测、外接刷卡，身份证阅读器、WiFi 功能······</p>
+                            </div>
+                            <ul>
+                                <li> 识别模式：人 脸</li>
+                                <li>网络连接：WIFI | 网线RJ45</li>
+                                <li>管理方式：服务端 | 客户端 跨平台访问</li>
+                                <li>识别阈值：可 调</li>
+                                <li>识别距离：0.5 ~ 1.5米范围可调</li>
+                                <li>本地保存：近2个月记录（服务端不限）</li>
+                                <li> 识别高度：上下净高1米</li>
+                                <li>接 口：HTTP + JSON</li>
+                                <li> 支 架：壁挂</li>
+                                <li>验证鉴权：会员授权时间范围 | 工作时间范围 | 验证模式</li>
+                                <li>欢迎提示：文字（自定义） | 会员信息（备注）| 订制提示音</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pro-apply">
+                        <h4>适用场景</h4>
+                        <p>会议签到、大门考勤、小区门禁</p>
+                        <div class="pro-apply-area">
+                            <div class="pro-apply-img"><img src="../images/product/pro-apply-Ris13.png"
+                                    alt="人脸识别信息屏的应用场景"></div>
+                            <div class="pro-apply-text">
+                                <h5>识别速度快、准确率高</h5>
+                                <p>多场景信息发布</p>
+                                <p>支持多人脸同时识别</p>
+                                <p>支持功能扩展</p>
+                                <p>支持外接门禁模块</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="5" class="title-tab-content">
+                    <div class="proAgile-area">
+                        <div class="proAgile-area-title">
+                            <h5>人脸抓拍 · 无感识别 </h5>
+                            <p class="fs14">一款高速、支持变焦、自带补光的AI人脸抓拍识别摄像头</p>
+                        </div>
+                        <div class="proAgile-is13">
+                            <div class="proAgile-is13-item">
+                                <span>高速动态人脸捕捉、 内嵌自研AI算法、 自带双LED补光</span>
+                                <img src="../images/product/pro-ipcF-1.jpg" alt="人脸抓拍摄像头">
+                            </div>
+                            <div class="proAgile-is13-item">
+                                <span>采用IP67防水设计，轻松应对雨雪天气，室内室外都能用</span>
+                                <img src="../images/product/pro-ipcF-2.jpg" alt="人脸抓拍摄像头">
+                            </div>
+                        </div>
+                        <div class="proAgile-paramet is43">
+                            <div class="proAgile-paramet-title">
+                                <h5>Agile IPC-F 规格参数</h5>
+                                <p>高速动态识别，支持人脸底库配置、门禁输出控制······</p>
+                            </div>
+                            <ul>
+                                <li>像 素：200万</li>
+                                <li>焦 距：8 ~ 12mm（变焦可调）</li>
+                                <li>补 光：LED双灯芯</li>
+                                <li>人脸底库：30000张</li>
+                                <li>抓拍模式：人脸跟踪</li>
+                                <li>接 口：RJ45 | 12V3A | 门禁线</li>
+                                <li>告警模式：声音、图文</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pro-apply">
+                        <h4>适用场景</h4>
+                        <p>广泛应用于企事业、学校园区等各行业人脸身份识别的刷脸门禁、考勤管理等领域</p>
+                        <div class="pro-apply-area">
+                            <div class="pro-apply-img"><img src="../images/product/pro-apply-RipcF.png"
+                                    alt="人脸抓拍摄像头适用场景"></div>
+                            <div class="pro-apply-text">
+                                <h5>产品特点</h5>
+                                <p>高速动态人脸捕捉，10次抓拍/秒</p>
+                                <p>最高支持同时30张人脸抓拍</p>
+                                <p>自带双LED补光</p>
+                                <p>支持枪机、半球外形</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="6" class="title-tab-content">
+                    <div class="proAgile-area">
+                        <div class="proAgile-area-title">
+                            <h5>城市星光 · 夜视全彩 </h5>
+                            <p class="fs14">PC端、移动端、云端全方位服务与管理，支持丰富的二次开发 </p>
+                        </div>
+                        <div class="proAgile-is13">
+                            <div class="proAgile-is13-item">
+                                <span>支持VZ智能ISP，场景自适应</span>
+                                <img src="../images/product/pro-ipcC-1.jpg" alt="车牌识别摄像头">
+                            </div>
+                            <div class="proAgile-is13-item">
+                                <span>少量数据训练可迭代至98%</span>
+                                <img src="../images/product/pro-ipcC-2.jpg" alt="车牌识别摄像头">
+                            </div>
+                        </div>
+                        <div class="proAgile-paramet is43">
+                            <div class="proAgile-paramet-title">
+                                <h5>Agile IPC-C 规格参数</h5>
+                                <p>高清成像、高速引擎 &nbsp;|&nbsp; 车辆信息精准识别·······</p>
+                            </div>
+                            <ul>
+                                <li>机 型：2MP一体机，双核900MHz处理器 + CNN硬件加速引擎(0.5Tops) </li>
+                                <li>标配/选配：标配6mm定焦镜头；选配2.8 ~ 12mm、6 ~ 22mm、<br>5 ~ 50mm电动变焦镜头</li>
+                                <li>图像传感器：1/2.8 星光级 CMOS</li>
+                                <li>USB：1路USB Type-A接口（可选配4G模组）</li>
+                                <li>最大分辨率：1920 × 1080</li>
+                                <li>最低照度：0.01Lux(Color)</li>
+                                <li>识别率：抓拍率≥99.99%；识别率≥99.8%（VIR5.0算法）</li>
+                                <li>数据输出：H265\H264\MJPEG\智能检测结构化数据输出</li>
+                                <li>网络接口：1路10/100Mbps 自适应RJ45</li>
+                                <li>语音对讲：支持云本地双向语音对讲，音频编码G.711/AAC</li>
+                                <li>其他接口：IO输出：2路，IO输入：4路，RS485：1路</li>
+                                <li>ISP：支持VZ智能ISP，场景自适应</li>
+                                <li>AUDIO：1路输入（LINE&MIC）+ 1路输出（无源）</li>
+                                <li>服 务：基础服务及云服务，支持丰富的二次开发</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pro-apply">
+                        <h4>适用场景</h4>
+                        <p>适用于无植被遮挡可架设横杆路段</p>
+                        <div class="pro-apply-area">
+                            <div class="pro-apply-img"><img src="../images/product/pro-apply-RipcC.png"
+                                    alt="车牌识别摄像头适用场景"></div>
+                            <div class="pro-apply-text">
+                                <h5>车身跟踪、确保识别率</h5>
+                                <p>综合识别率≥95%</p>
+                                <p>接口丰富，助力业务拓展</p>
+                                <p>内置智能补光，看得更清楚</p>
+                                <p>脱机自组网，省时又省心</p>
+                                <p>云端管理，降低运营成本</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </article>
+
+    <!-- 引入页尾菜单 -->
+    <div class="footerMenu"></div>
+
+    <!-- 引入选项卡JavaScript -->
+    <script src="../script/tabUrl.js"></script>
+</body>
+
+</html>

@@ -160,6 +160,7 @@
             padding: 8rem 5rem;
             width: calc(100% / 3);
             height: 100%;
+            transition: 1s;
         }
 
         .solution-trait-title {
@@ -180,6 +181,32 @@
         .solution-trait-item>p {
             font-size: 2rem;
             line-height: 44px;
+        }
+
+        .solution-trait-box:hover .solution-trait-item {
+            width: 30rem;
+        }
+
+        .solution-trait-box .solution-trait-item:hover {
+            width: 40rem;
+        }
+
+        /* 解决方案 - 相关推荐 */
+        .solution-recom {
+            padding: 6rem 0 10rem;
+            background: linear-gradient(45deg, #122379, #0c2059);
+        }
+
+        .solution-recom>h4 {
+            color: #fff;
+        }
+
+        .solution-recom .solution-effect li {
+            width: calc((100% - 4px) / 2);
+        }
+
+        .solution-recom .solution-effect {
+            margin-bottom: 0;
         }
 
     </style>
@@ -327,6 +354,7 @@
                     <p>三方业务平台对接</p>
                 </div>
             </div>
+            <a href="#" class="btnBlue">渠道或代理</a>
         </div>
     </article>
 

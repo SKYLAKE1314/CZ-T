@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- 引入 Bundle.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Bootstrap JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+
+    <!-- 引入字体图标样式 -->
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="../style/base.css">
+    <!-- 引入头部-底部公共样式 -->
+    <link rel="stylesheet" href="../style/frame.css">
+    <style>
+        .edu3-banner {
+            height: 520px;
+            background: url(../picture/edu3-banner.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        /* 曲线背景 */
+        .edu-trait-area {
+            padding: 4% 0 2%;
+            background: url(../images/bg-quxian.svg) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        /* 产品特征 */
+        .edu-trait-box {
+            display: flex;
+            margin-bottom: 6rem;
+        }
+
+        .edu-trait-item {
+            position: relative;
+            padding-left: 7.5rem;
+            width: calc(100% / 3);
+        }
+
+        .edu-trait-item h3 {
+            background: linear-gradient(to right, #1e3abf, #3579d8, #4fc2f4);
+            /* 将背景裁切在元素边框内容，实现半透明效果 */
+            -webkit-background-clip: text;
+            background-clip: text;
+            /* 用文字取背景色 */
+            color: transparent;
+            font-size: 3rem;
+        }
+
+        .edu-trait-item p {
+            margin-top: 6px;
+            font-size: 1.2rem;
+            color: #7a7a7a;
+        }
+
+        .edu-trait-item::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 8rem;
+            height: 6.9rem;
+        }
+
+        .edu-trait-item:nth-child(1)::before {
+            background: url(../images/icon-trait-xj.png) no-repeat;
+            background-size: 6rem;
+        }
+
+        .edu-trait-item:nth-child(2)::before {
+            background: url(../images/terrace-icon5.png) no-repeat;
+            background-size: 6rem;
+        }
+
+        .edu-trait-item:nth-child(3)::before {
+            background: url(../images/icon-trait-mobile.png) no-repeat;
+            background-size: 6rem;
+        }
+
+        .edu-trait-item:nth-child(4)::before {
+            background: url(../images/terrace-icon5.png) no-repeat;
+            background-size: 6rem;
+        }
+
+        /* 软件与服务 */
+        .solution {
+            padding: 4% 2% 4% 5%;
+            background: linear-gradient(45deg, #d3d6e9, #45d9e2);
+            color: #fff;
+        }
+
+        .solution-title {
+            overflow: hidden;
+        }
+
+        .solution-title-text {
+            float: left;
+            padding-top: 3rem;
+            width: 52%;
+        }
+
+        .solution-title-text h5 {
+            font-size: 3.4rem;
+            margin-bottom: 3rem;
+        }
+
+        .solution-title-text p {
+            font-size: 1.6rem;
+            line-height: 3.4rem;
+        }
+
+        .solution-Rimg {
+            float: right;
+            width: 49.5rem;
+            height: 37.7rem;
+        }
+
+        .solution-Rimg>img {
+            max-width: 100%;
+        }
+
+        /* 摘要 */
+        .solution-summary {
+            display: flex;
+            justify-content: space-between;
+            padding: 4% 1.6% 4% 0;
+        }
+
+        .solution-summary-item {
+            width: 49%;
+            border-radius: 5px;
+            background: rgba(27, 34, 50, .2);
+        }
+
+        .solution-summary-title {
+            padding: 0 8%;
+            height: 7rem;
+            line-height: 7rem;
+            background: rgba(27, 34, 50, .2);
+        }
+
+        .solution-summary-content {
+            padding: 6% 8%;
+            overflow: hidden;
+        }
+
+        .solution-summary-content li {
+            float: left;
+            width: 50%;
+            line-height: 3.4rem;
+            font-size: 1.5rem;
+        }
+
+        .solution-summary-content li::before {
+            content: '•';
+            display: inline-block;
+            width: 18px;
+            opacity: .6;
+        }
+
+        .solution-summary-content li:last-child::before {
+            content: '';
+        }
+
+        /* 轮播图 */
+        .slide-area {
+            width: 100%;
+            height: 500px;
+        }
+
+        #carouselExampleIndicators,
+        #carouselExampleIndicators .carousel-inner,
+        #carouselExampleIndicators .carousel-item,
+        #carouselExampleIndicators .carousel-item .carousel-box {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 轮播 控制器 */
+        .carousel-indicators {
+            bottom: 24px;
+        }
+
+        .carousel-indicators li {
+            width: 28px;
+            height: 4px;
+            /* 元素倾斜效果 水平方向 垂直方向 */
+            transform: skew(-45deg);
+        }
+
+        /* 轮播 文本内容 */
+        .carousel-box-text {
+            position: absolute;
+            top: 200px;
+            left: 20px;
+            color: #fff;
+        }
+
+        .carousel-box.img1 {
+            background: url(../images/case-sd.jpg) center;
+            background-size: 100% auto;
+        }
+
+        .carousel-box.img2 {
+            background: url(../images/case-yn.jpg) center;
+            background-size: 100% auto;
+        }
+
+        .carousel-box.img3 {
+            background: url(../images/case-dx.jpg) center;
+            background-size: 100% auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 引入页首菜单 -->
+    <div class="headerMenu"></div>
+    <!-- 子页面的banner -->
+    <article id="Top" class="sub-banner-area edu3-banner">
+        <div class="wrap">
+            <div class="banner-area-text">
+                <h2>智慧教育3.0平台</h2>
+                <p>集智慧校园国际GB/T36</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="edu-trait-area">
+        <div class="wrap">
+            <!-- 产品特征 -->
+            <div class="edu-trait-box">
+                <span class="edu-trait-item">
+                    <h3>先进技术</h3>
+                    <p>AIoT人工智能 + 物联网技术</p>
+                </span>
+                <span class="edu-trait-item">
+                    <h3>一体化平台</h3>
+                    <p>统一集中</p>
+                </span>
+                <span class="edu-trait-item">
+                    <h3>强移动端</h3>
+                    <p>微信移动化应用</p>
+                </span>
+                <span class="edu-trait-item">
+                    <h3>定制化服务</h3>
+                    <p>二次开发，三方对接</p>
+                </span>
+            </div>
+        </div>
+        <div class="hr-line"></div>
+        <h4>软件与服务</h4>
+    </article>
+
+
+    <!-- 软件与服务 -->
+    <article class="wrap">
+        <div class="solution">
+            <div class="solution-title">
+                <div class="solution-title-text">
+                    <h3>智慧教育3.0平台</h3>
+                    <p>以云服务（公/私）模式为教育局、K12校园提供轻量化、一体化平台， 支持普教、职教应用场景。</p>
+                </div>
+                <div class="solution-Rimg">
+                    <img src="../images/apply-edu3-Rimg.png" alt="智慧教育3.0平台">
+                </div>
+            </div>
+            <!-- 摘要 -->
+            <div class="solution-sumary">
+                <div class="solution-sumary-item">
+                    <div class="solution-summary-title">区级功能</div>
+                    <ul class="solution-summary-content">
+                        <li>安全督导管理</li>
+                        <li>在线巡课模块</li>
+                        <li>······</li>
+                    </ul>
+                </div>
+                <div class="solution-sumary-item">
+                    <div class="solution-summary-title">校级功能</div>
+                    <ul class="solution-summary-content">
+                        <li>学生请假模块</li>
+                        <li>家长微信端宿舍</li>
+                        <li>进出管理</li>
+                        <li>功能智慧校园基础平台······</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- 轮播案例 -->
+    <section class="example">
+        <div class="hr-line"></div>
+        <div class="wrap">
+            <div class="example-title">
+                <h4>案例分析</h4>
+                <p>为区一级教育局、校园推行智慧校园、平安校园建设</p>
+            </div>
+        </div>
+    </section>
+    <!-- 轮播图区域 -->
+    <article class="slide-area">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <!-- 轮播 - 控制器 -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-box img1">
+                        <div class="wrap">
+                            <div class="carousel-box-text">
+                                <h2>AgileNet目标检测网络</h2>
+                                <h3>自主研发AgilNet目标检测网络，目标与分类网络一体。</h3>
+                                <h3>采用神经网络深度学习，突破小尺寸，高动态和模拟图片人脸检测的极限，大大提升了检测的准确性。</h3>
+                                <div class="btnMore">了解更多</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-box img2">
+                        <div class="wrap">
+                            <div class="carousel-box-text">
+                                <h2>AIoT · 未来已来，智慧云视ACV创新平台</h2>
+                                <h3>采用：“云 + 网 + 端” 架构，依托人工智能云、物联网技术、边缘计算终端，</h3>
+                                <h3>为智能城市、智能校园、智能安防、应急响应等行业及场景提供了高效的AI落地通道</h3>
+                                <div class="btnMore">了解更多</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-box img3">
+                        <div class="wrap">
+                            <div class="carousel-box-text">
+                                <h2>Agile - iBox 边缘计算终端</h2>
+                                <h3>前置AI分析，节约流量宽带，让应用方案更灵活、可靠！</h3>
+                                <!-- <h3>采用神经网络深度学习，突破小尺寸，高动态和模拟图片人脸检测的极限，大大提升了检测的准确性。</h3> -->
+                                <div class="btnMore">了解更多</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </article>
+</body>
+
+</html>

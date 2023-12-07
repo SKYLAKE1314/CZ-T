@@ -48,7 +48,9 @@
             height: 64.8rem;
             background: url(../images/target-detection.jpg) no-repeat;
             background-size: 100% 64.8rem;
-            position: relative;
+            position: absolute;
+            top: 200px;
+            z-index: -1;
         }
 
         .tab-cont-show {
@@ -56,6 +58,7 @@
         }
 
         .target-detection-area {
+            width: 1240px;
             overflow: hidden;
         }
 
@@ -74,6 +77,8 @@
         .carjc .item-box,
         .boatjc .item-box,
         .wordjc .item-box {
+            position: relative;
+            left: 7px;
             width: calc((100% - 42px) / 3);
             height: 68.8rem;
         }

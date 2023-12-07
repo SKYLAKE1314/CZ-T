@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI智能科技 | 联系我们</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- 引入 Bundle.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <!-- 引入 Bootstrap JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <!-- 引入字体图标样式 -->
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="../style/base.css">
+    <!-- 引入头部-底部公共样式 -->
+    <link rel="stylesheet" href="../style/frame.css">
+</head>
+
+<style>
+    .contact-banner {
+        height: 520px;
+        background: url(../picture/contact-us-banner.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    /* 特性-曲线背景 */
+    .contact-trait-area {
+        padding: 4% 0 2%;
+        background: url(../images/bg-quxian.svg) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    /* 产品特征 */
+    .contact-trait-area {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+    }
+
+    .contact-trait-item {
+        position: relative;
+        /* padding-left: 7.5rem; */
+        padding: 2rem 2rem 2rem 9.2rem;
+        width: 24%;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(32, 128, 213, .2);
+    }
+
+    .contact-trait-item h3 {
+        background: linear-gradient(to right, #1e3abf, #3579d8, #4fc2f4);
+        /* 将背景裁切在元素边框内容，实现半透明效果 */
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* 用文字取背景色 */
+        color: transparent;
+        font-size: 2.6rem;
+    }
+
+    .contact-trait-item p {
+        margin-top: 6px;
+        font-size: 1.2rem;
+        color: #7a7a7a;
+    }
+
+    .contact-trait-item::before {
+        content: '';
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        width: 8rem;
+        height: 6.9rem;
+    }
+
+    .contact-trait-item:nth-child(1)::before {
+        background: url(../images/icon-trait-hz.png) no-repeat;
+        background-size: 6rem;
+    }
+
+    .contact-trait-item:nth-child(2)::before {
+        background: url(../images/icon-trait-qd.png) no-repeat;
+        background-size: 6rem;
+    }
+
+    .contact-trait-item:nth-child(3)::before {
+        background: url(../images/icon-trait-gys.png) no-repeat;
+        background-size: 6rem;
+    }
+
+    .contact-trait-item:nth-child(4)::before {
+        background: url(../images/icon-trait-ai.png) no-repeat;
+        background-size: 6rem;
+    }
+
+    .contact-us-title {
+        width: 100%;
+        height: 9.5rem;
+        line-height: 9.5rem;
+        background: url(../images/contact-us-title.jpg) no-repeat;
+        color: #fff;
+        letter-spacing: 2px;
+    }
+
+    .contact-us-title .tel {
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
+
+    .contact-us-title .tel::before {
+        content: '';
+        position: absolute;
+        top: 3rem;
+        left: -3.6rem;
+        width: 3.6rem;
+        height: 3rem;
+        background: url(../images/tel.png) no-repeat;
+        background-size: contain;
+    }
+
+    .contact-us-title .tel em {
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    /* 申请表单 */
+    .apply-form {
+        font-size: 1.8rem;
+    }
+
+    .apply-form input,
+    .apply-form textarea,
+    .apply-form .form-select {
+        padding-left: 16px;
+        width: 70%;
+        height: 42px;
+        border: 1px rgba(85, 85, 85, .2) solid;
+        border-radius: 3px;
+    }
+
+    .apply-form>li {
+        position: relative;
+        margin-bottom: 2.6rem;
+    }
+
+    .apply-form li label {
+        margin-right: 1.8rem;
+        resize: none;
+        vertical-align: middle;
+    }
+
+    .apply-form li textarea {
+        height: 10rem;
+        resize: none;
+    }
+
+    /* 模拟下拉列表 */
+    .form-select {
+        position: absolute;
+        top: -2rem;
+        left: 95px;
+    }
+
+    .form-select::after {
+        content: '';
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        width: 0;
+        height: 0;
+        border-top: 5px solid;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+    }
+
+    .form-select .select {
+        width: 95%;
+    }
+
+    .form-select .select span {
+        line-height: 4.3rem;
+    }
+
+    .form-select .select input {
+        padding-left: 0;
+        height: 3.4rem;
+        border: none;
+    }
+
+    /* select::-ms-expand {
+        display: none;
+    } */
+
+    .form-select ul {
+        display: none;
+        position: absolute;
+        top: 4.3rem;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .form-select ul li {
+        padding-left: 16px;
+        border: rgba(85, 85, 85, .2) 1px solid;
+        border-radius: 3px;
+        line-height: 40px;
+        border-radius: 0;
+        cursor: pointer;
+    }
+
+    .form-select ul li:hover {
+        background: rgba(225, 225, 225, .6);
+    }
+
+    .form-select ul li:not(:first-child) {
+        border-top: none;
+    }
+
+    /* 改变 input textarea 的 placeholder 字体颜色 */
+    /* :-webkit兼容 Chrome Safari */
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+        color: rgb(168, 168, 168);
+    }
+
+    /* FireFox 兼容 */
+    input::-moz-input-placeholder,
+    textarea::-moz-input-placeholder {
+        color: rgb(168, 168, 168);
+    }
+
+    /* Edge 兼容 */
+    input::-ms-input-placeholder,
+    textarea::-ms-input-placeholder {
+        color: rgb(168, 168, 168);
+    }
+
+    .apply-tips {
+        margin: 50px auto;
+        padding: 30px 0;
+        width: 40%;
+        border-top: rgba(221, 221, 221, .8) 1px solid;
+        text-align: center;
+        font-size: 1.4rem;
+        color: rgb(80, 80, 80);
+    }
+
+    .apply-tips span {
+        color: rgb(24, 60, 179);
+    }
+
+    /* 服务与支持 */
+    .service {
+        position: relative;
+        height: 300px;
+    }
+
+    .service .wrap {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    .service-area {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .service-item {
+        width: 38rem;
+        box-shadow: 1px 1px 5px #bdb6b682;
+    }
+
+    .service-item>img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .service-item .flag {
+        padding: 20px;
+        background: #fff;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    /* 遮罩层 */
+    .service-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        background: url(../images/service-mask-bg.jpg) no-repeat;
+        color: #fff;
+        transform: translate3d(0, 50%, 0);
+        transition: .5s;
+        opacity: 0;
+    }
+
+    .service-item:hover .service-mask {
+        transform: scale(1.01);
+        opacity: 1;
+    }
+
+    /* 满屏线条背景 */
+    .service-linear {
+        position: relative;
+        margin-top: 100px;
+        height: 400px;
+        color: #fff;
+        background: linear-gradient(45deg, #0e1a5a 20%, #0b2258);
+        background-size: 100% 100%;
+    }
+
+    .service-linear .line-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 35rem;
+        background: url(../images/line-bg.svg) no-repeat center;
+        background-size: 100% 100%;
+        z-index: 1;
+    }
+</style>
+
+<body>
+    <!-- 引入页首菜单 -->
+    <div class="headerMenu"></div>
+    <!-- 子页面的banner -->
+    <article class="sub-banner-area contact-banner">
+        <div class="wrap">
+            <div class="banner-area-text">
+                <h2>我们的愿景</h2>
+                <p>期待与您一起探索智慧的奥秘，拓展人工智能新疆界 ······</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- 联系我们-特征 -->
+    <article class="contact-trait">
+        <div class="wrap">
+            <div class="contact-trait-area">
+                <span class="contact-trait-item">
+                    <h3>生态战略合作</h3>
+                    <p>助力AI人工智能</p>
+                </span>
+                <span class="contact-trait-item">
+                    <h3>市场及渠道</h3>
+                    <p>提供全力支撑服务</p>
+                </span>
+                <span class="contact-trait-item">
+                    <h3>优质供应商</h3>
+                    <p>成熟平台级应用</p>
+                </span>
+                <span class="contact-trait-item">
+                    <h3>“应征入伍”</h3>
+                    <p>共同探索AI奥秘</p>
+                </span>
+            </div>
+        </div>
+        <div class="hr-line"></div>
+        <div class="wrap">
+            <h4 class="contact-us-title">联系我们<span class="tel">欢迎来电：</span><em>400-158-4848</em></h4>
+        </div>
+    </article>
+    <!-- 申请表单 -->
+    <form class="wrap">
+        <ul class="apply-form">
+            <li>
+                <label>合作类型</label>
+                <div class="form-select">
+                    <div class="select">
+                        <span><input type="text" placeholder="市场及渠道合作"></span>
+                    </div>
+                    <ul>
+                        <li>市场及渠道合作</li>
+                        <li>“应征入伍”</li>
+                        <li>投融资意向</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <label>联系姓名</label>
+                <input type="text" name="userName" placeholder="姓 名">
+            </li>
+            <li>
+                <label>联系电话</label>
+                <input type="text" name="tel" placeholder="联系电话">
+            </li>
+            <li>
+                <label>电子邮件</label>
+                <input type="text" name="email" placeholder="e-mail">
+            </li>
+            <li>
+                <label>咨询内容</label>
+                <input type="text" name="cont" placeholder="谈谈您想咨询的内容">
+            </li>
+        </ul>
+        <a href="#" class="btnBlue">提交信息</a>
+    </form>
+    <p class="apply-tips">如果您对我们的产品感兴趣，想成为合作伙伴，<span>我们随时欢迎您的加入</span></p>
+
+    <!-- 服务与支持 -->
+    <article class="service">
+        <div class="hr-line"></div>
+        <div class="wrap">
+            <h4>服务与支持</h4>
+            <ul class="service-area">
+                <li class="service-item">
+                    <img src="../images/contact-us-fw.jpg" alt="服务与支持">
+                    <div class="flag">服务与支持</div>
+                    <div class="service-mask">
+                        <h5>交付实施服务</h5>
+                        <p>交付实施服务
+                            AI智能交付服务团队为您提供专业、全面的交付服务，以客户需求为出发点，提供最优的方案，协助您快速、平滑、低成本地完成项目平台的搭建。
+                        </p>
+                    </div>
+                </li>
+                <li class="service-item">
+                    <img src="../images/contact-us-yw.jpg" alt="售后运维服务">
+                    <div class="flag">服务与支持</div>
+                    <div class="service-mask">
+                        <h5>售后运维服务</h5>
+                        <p>AI智能专业的技术支持工程师团队为您提供专业、及时的支持服务，快速响应，精准定位，保障生产系统稳定运行，同时运维团队通过积极主动的运维支持和持续优化，保证客户所用平台系统维持在最佳状态。
+                        </p>
+                    </div>
+                </li>
+                <li class="service-item">
+                    <img src="../images/contact-us-px.jpg" alt="培训交付服务">
+                    <div class="flag">培训交付服务</div>
+                    <div class="service-mask">
+                        <h5>交付实施服务</h5>
+                        <p>AI智能提供免费的项目交付培训服务，努力将我司最新、最好的产品使用体验带给客户，以客户的使用反馈作为市场口碑。
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 满屏线条背景 -->
+        <div class="service-linear">
+            <div class="line-bg"></div>
+        </div>
+    </article>
+
+    <!-- 引入页尾菜单 -->
+    <div class="footerMenu"></div>
+
+    <!-- 引入选项卡JavaScript -->
+    <script src="../script/tabUrl.js"></script>
+    <script>
+        // 加载页首、页尾菜单 load()方法可以将数据加载放置到指定元素中
+        // 将文件 "head.html"的内容加载到指定的 .headerMenu 盒子中
+        $('.headerMenu').load('header.html')
+        $('.footerMenu').load('footer.html')
+    </script>
+
+    <!-- 模拟下拉列表 -->
+    <script>
+        $('.form-select .select').click(function () {
+            $(this).siblings('ul').toggle()
+            return false
+        })
+
+        $('.form-select ul li').click(function () {
+            // console.log($(this).text()); 或群当前点击li的值
+            // children() 直接元素的【直接子元素】
+            // find() 可查找元素的【所有的后代元素】
+            // $(this).sibings('ul').sibings('.select').children('span').text($(this).text())
+            $(this).parent('ul').siblings('.select').find('input').val($(this).text())
+            $(this).parent('ul').hide()
+        })
+    </script>
+</body>
+
+</html>
